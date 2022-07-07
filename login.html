@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+Web o pagina: Proyecto Final 1º DAM
+Autor: Mª Carmen Arias de Haro
+Fecha: Junio 2021
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- importante SEO para la etiqueta del navegador -->
+    <title>Animal Crossing</title>
+
+    <!-- una fuente de Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet" />
+
+    <!-- una hoja de estilos personalizada-->
+    <link href="./css/cssproyectoindex.css" rel="stylesheet" />
+    <link href="./css/fonts.css" rel="stylesheet" />
+
+    <!-- iconos u otros elementos externos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- scripts externos de librerias JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="marco">
+        <header class="encabezado">
+            <div id="logo">
+                <!-- Botón para el modo noche -->
+                <button class="darkModeSwitch" id="switch">
+                    <span><i class="fa fa-sun-o"></i></span>   
+                    <span><i class="fa fa-moon-o"></i></span></button>
+                <img class="logo" src="./media/logo.png" alt="Logo">
+                <a href="./trabajofinal.html"><img class="hoja" src="./media/hoja.png" alt="Proyecto Final Web"></a>
+            </div>
+
+            <!-- Botón del menú en versión móvil-->
+            <div class="menu_bar">
+                <a href="#" class="bt-menu"><span class="icon-menu"></span></a>
+            </div>
+
+            <!--Menú Responsive-->
+            <nav aria-label class="menuResponsive">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="personajes.html">Personajes</a></li>
+                    <li><a href="edificios.html">Edificios</a></li>
+                    <li><a href="dolly.html">Dolly</a></li>
+                    <li><a class="activo" class="loginBoton" id="loginBoton" href="login.html">Zona Privada</a></li>
+                    <p class="conectado" id="conectado"></p>
+                    <li><a class="logout" id="logout" onclick="cerrarSesion()">Desconectar</a></li>
+                    <button class="darkModeSwitchResponsive" id="switch2">
+                        <span><i class="fa fa-sun-o"></i></span>   
+                        <span><i class="fa fa-moon-o"></i></span></button>
+                </ul>
+            </nav>
+
+            <!--Menú normal de la página-->
+            <nav aria-label class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="personajes.html">Personajes</a>
+                <a href="edificios.html">Edificios</a>
+                <a href="dolly.html">Dolly</a>
+                <a class="activo" class="loginBoton" id="loginBoton" href="login.html">Zona Privada</a>
+                <p class="conectado" id="conectado"></p>
+                <a class="logout" id="logout" onclick="cerrarSesion()">Desconectar</a>
+
+            </nav>
+        </header>
+
+
+        <section class="contenido">
+
+            <!--Formulario del Login-->
+            <form id="login" class="login">
+                <h2> Inicia sesión: </h2>
+                <br><input type="text" id="user" name="userid" placeholder="Usuario" /><br>
+                <br><input type="password" id="pass" name="password" placeholder="Contraseña" /><br><br>
+                <input class="botonLogin" onclick="leerXML()" type="button" id="b1" value="Login" />
+                <input type="reset" class="botonLogin" value="Cancel">
+            </form>
+
+            <img class="imgInicioSesion" src="./media/inicioSesion.png" alt="¡Toom Nook te saluda para que inicies sesión!">
+
+            <!--Contenido oculto que sólo se muestra cuando el Login es correcto-->
+            <p id="oculto" class="oculto"> ¡Bienvenido a la sección secreta!</p>
+
+            <div class="contenedorVideos oculto">
+                <iframe class="videoOculto" src="https://www.youtube.com/embed/UE-uGAbfcvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="videoOculto" src="https://www.youtube.com/embed/MzarFCCAdY0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="videoOculto" src="https://www.youtube.com/embed/_nS_4Pi8au8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="videoOculto" src="https://www.youtube.com/embed/n9M5kKDY1Ak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Se agregan los Javascript que vamos a usar en cada página -->
+    <script src="./js/jsproyecto.js"></script>
+    <script src="./js/jslogin.js"></script>
+
+</body>
+
+</html>

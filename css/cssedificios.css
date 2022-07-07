@@ -1,0 +1,98 @@
+/*CSS
+Web o pagina: Proyecto Final 1º DAM
+Autor: Mª Carmen Arias de Haro
+Fecha: Junio 2021
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.edificio {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(255, 86, 19);
+    margin-bottom: 10px;
+}
+
+.lado a {
+    text-decoration: none;
+    color: black;
+}
+
+.lado a:hover {
+    color: rgb(255, 86, 19);
+}
+
+.image-wrap {
+    width: 700px;
+    height: 392px;
+    margin: 1% 30% 3% 20%;
+    overflow: hidden;
+    /*Ocultamos el overflow para cuando realice el efecto */
+    position: relative;
+}
+
+.image-wrap img {
+    width: 700px;
+    height: 392px;
+    border: solid;
+    border-color: white;
+}
+
+.image-wrap img:hover {
+    /* Realiza el efecto Ken Burns creado abajo al pasar el ratón sobre la imagen */
+    animation: move 5s ease;
+    -ms-animation: move 5s ease;
+    -webkit-animation: move 5s ease;
+    -animation: move 5s ease;
+    -moz-animation: move 5s ease;
+}
+
+@keyframes move {
+    /*Efecto KEN BURNS*/
+    0% {
+        -webkit-transform-origin: center;
+        -moz-transform-origin: center;
+        -ms-transform-origin: center;
+        -o-transform-origin: center;
+        transform-origin: center;
+        transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        /* IE 9 */
+        -webkit-transform: scale(1.0);
+        /* Safari and Chrome */
+        -o-transform: scale(1.0);
+        /* Opera */
+        -moz-transform: scale(1.0);
+        /* Firefox */
+    }
+    100% {
+        transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        /* IE 9 */
+        -webkit-transform: scale(1.2);
+        /* Safari and Chrome */
+        -o-transform: scale(1.2);
+        /* Opera */
+        -moz-transform: scale(1.2);
+        /* Firefox */
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .lado a {
+        font-size: 15px;
+    }
+    .image-wrap,
+    .image-wrap img {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+}

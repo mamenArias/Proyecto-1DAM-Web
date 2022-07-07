@@ -1,0 +1,250 @@
+ /*CSS
+Web o pagina: Proyecto Final 1º DAM
+Autor: Mª Carmen Arias de Haro
+Fecha: Junio 2021
+*/
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&family=New+Tegomin&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+ * {
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+ }
+ 
+ body {
+     background-color: gainsboro;
+     background-image: url("../media/fondo.jpg");
+     background-repeat: repeat;
+     background-size: cover;
+ }
+ 
+ .marco {
+     display: grid;
+     grid-template-columns: auto;
+     grid-template-rows: 71px 0px auto;
+     grid-gap: 0px;
+     width: 100vw;
+     height: 100vh;
+ }
+ 
+ .encabezado {
+     border-style: none;
+     grid-column: 1 / span 2;
+     grid-row: 1 / span 1;
+     height: auto;
+ }
+ 
+ .menu {
+     width: 100%;
+     overflow: hidden;
+     height: auto;
+     text-align: center;
+     background-color: #FFCE29;
+     display: flex;
+     overflow: hidden;
+ }
+ 
+ .menu a {
+     list-style: none;
+     margin: 10px;
+     position: relative;
+     font-size: 20px;
+     font-family: 'Londrina Solid', cursive;
+     color: black;
+     text-align: center;
+     padding: 14px 16px;
+     font-weight: bolder;
+     text-decoration: none;
+ }
+ 
+ .menu a:hover {
+     background-color: white;
+     border-radius: 15px;
+     height: 100%;
+     color: #C75A00;
+     font-size: 1.5em;
+     padding: 11px 13px;
+     transition: all .3s ease-in-out;
+ }
+ 
+ .cenec {
+     width: 20%;
+     text-align: left;
+ }
+ 
+ .icono {
+     /*Iconos según las estaciones*/
+     width: 30px;
+     height: auto;
+     margin-right: 5px;
+     vertical-align: bottom;
+ }
+ 
+ .volver {
+     width: 20%;
+     text-align: right;
+ }
+ 
+ .trabajo {
+     width: 60%;
+     text-align: center;
+     font-size: 20px;
+     font-family: 'Londrina Solid', cursive;
+     color: black;
+     text-align: center;
+     padding: 14px 16px;
+     font-weight: bolder;
+     margin: 10px;
+ }
+ 
+ .trabajo:hover {
+     /*Aumenta el tamaño de las imágenes gradualmente al pasar el ratón por encima */
+     font-size: 2em;
+     transition: all .3s ease-in-out;
+     color: #C75A00;
+ }
+ 
+ .contenido {
+     width: 100%;
+     border-style: hidden;
+     grid-column: 1 / span 2;
+     grid-row: 3 / span 1;
+     background-color: #C0F0E9;
+     text-align: justify;
+     line-height: 1.5em;
+     opacity: 0.98;
+     overflow-y: auto;
+     overflow-x: hidden;
+     padding: 2%;
+ }
+ 
+ .informacionPersonal {
+     display: flex;
+ }
+ 
+ .imagen {
+     width: 20%;
+ }
+ 
+ .imagen img {
+     width: 100%;
+     height: auto;
+     border-radius: 15px;
+     margin-left: 23%;
+     margin-top: 11%;
+ }
+ 
+ .imagen img:hover {
+     -webkit-transform: scale(1.2);
+     transform: scale(1.2);
+     filter: brightness(1.2);
+     transition: 3s;
+ }
+ 
+ .texto {
+     width: 60%;
+     text-align: center;
+ }
+ 
+ .mapa {
+     width: 20%;
+     margin-right: 5%;
+ }
+ 
+ .mapa iframe {
+     width: 100%;
+     height: auto;
+     border: 0;
+     margin-top: 60%;
+ }
+ 
+ .mapa iframe:hover {
+     transform: scale(1.5);
+     transition: 3s;
+ }
+ 
+ h2 {
+     font-family: 'Acme', sans-serif;
+     font-size: 24px;
+     font-weight: bolder;
+     padding-left: 10%;
+     padding-right: 10%;
+     line-height: 1.5em;
+ }
+ 
+ p {
+     padding-left: 10%;
+     padding-right: 10%;
+     font-family: 'Acme', sans-serif;
+     font-size: 18px;
+ }
+ 
+ .listasContenido {
+     padding-left: 10%;
+     padding-right: 10%;
+     font-family: 'Acme', sans-serif;
+     margin-left: 2em;
+     list-style: circle;
+     font-size: 20px;
+ }
+ 
+ .texto2 {
+     width: 100%;
+     margin-top: 50px;
+     margin-bottom: 30px;
+     text-align: center;
+ }
+ 
+ .documentos {
+     display: flex;
+     flex-wrap: wrap;
+     margin-left: 7%;
+     margin-right: 5%;
+ }
+ 
+ .documentos img {
+     width: 45%;
+     height: auto;
+     margin: 15px;
+ }
+ 
+ .documentos img:hover {
+     transform: scale(1.2);
+     transition: 3s;
+ }
+ 
+ @media only screen and (max-width: 640px) {
+     .palabra {
+         display: none;
+     }
+     .trabajo {
+         margin: 0;
+     }
+     .informacionPersonal {
+         display: flex;
+         flex-wrap: wrap;
+         /*Con esto hacemos que si no cabe en la pantalla porque está en modo responsive, se pasa a la siguiente línea */
+     }
+     .imagen {
+         width: 100%;
+     }
+     .imagen img {
+         width: 55%;
+         height: auto;
+     }
+     .texto {
+         width: 100%;
+     }
+     .mapa {
+         width: 100%;
+         margin: 0;
+     }
+     .mapa iframe {
+         margin: 0;
+     }
+     .documentos img {
+         width: 100%;
+         margin: 0 0 10px 0;
+     }
+ }

@@ -1,0 +1,692 @@
+   /*CSS
+    Web o pagina: Proyecto Final 1º DAM
+    Autor: Mª Carmen Arias de Haro
+    Fecha: Junio 2021
+    */
+   
+   @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&family=New+Tegomin&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+   * {
+       box-sizing: border-box;
+       padding: 0;
+       margin: 0;
+   }
+   
+   body {
+       background-color: gainsboro;
+       background-image: url("../media/fondo.jpg");
+       background-repeat: no-repeat;
+       background-size: cover;
+   }
+   
+   .marco {
+    /*Se ha hecho una página con diseño de grilla*/
+    display: grid;
+    grid-template-areas: 
+        "encabezado encabezado encabezado encabezado"
+        "menu menu menu menu"
+        "lado contenido contenido contenido";
+    height: 100vh;
+}
+   
+   .encabezado {
+    grid-area: encabezado;
+       border-style: none;
+       grid-column: 1 / span 2;
+       grid-row: 1 / span 1;
+       height: auto;
+   }
+   
+   .logo {
+       /*Logotipo de Animal Crossing*/
+       margin: auto;
+       width: 200px;
+       height: auto;
+       margin-left: 37%;
+   }
+   
+   .hoja {
+       /*Hoja con mis datos y del curso*/
+       float: right;
+       margin-top: 10px;
+       margin-right: 20px;
+       padding: 0;
+       width: 125px;
+       height: auto;
+   }
+   
+   .hoja:hover {
+       transform: scale(1.3);
+   }
+   
+   .menu_bar,
+   .menuResponsive {
+       /*Ocultamos el menú responsive cuando estamos con la página en tamaño normal*/
+       display: none;
+   }
+   
+   .menu {
+        grid-area: menu;
+        background-color: #FFCE29;
+        border-radius: 20px;
+   }
+   
+   .menu > ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }   
+
+   .menu a {
+        display: block;
+        padding: 20px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin: 10px;
+        font-size: 20px;
+        font-family: 'Londrina Solid', cursive;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        font-weight: bolder;
+        text-decoration: none;
+        transition: all .3s;
+   }
+   
+   .menu a:hover {
+       background-color: white;
+       border-radius: 15px;
+       height: 100%;
+       color: #C75A00;
+       font-size: 1.5em;
+       padding: 11px 13px;
+   }
+   
+   .activo {
+       background-color: white;
+       border-radius: 15px;
+       height: 100%;
+   }
+   
+   .logout {
+       display: inline-block;
+       padding: 0;
+       font-size: medium;
+       font-weight: bolder;
+       font-family: 'Acme', sans-serif;
+       color: #f87000;
+   }
+   
+   .lado {
+        grid-area: lado;
+       border-style: hidden;
+       /*grid-column: 1 / span 1;
+       grid-row: 3 / span 1;*/
+       background-image: url(../media/fondolateral.jpg);
+       border-radius: 20px;
+       padding-top: 35%;
+       padding-bottom: 25%;
+       overflow-y: auto;
+       overflow-x: hidden;
+   }
+   
+   .lado a,
+   .botonDesplegable {
+       padding: 6px 8px 6px 16px;
+       text-decoration: none;
+       display: block;
+       border: none;
+       background: none;
+       width: 90%;
+       cursor: pointer;
+       outline: none;
+       background-color: #FFF6CC;
+       font-size: 18px;
+       font-family: 'New Tegomin', serif;
+       font-weight: bolder;
+       text-align: center;
+       list-style: none;
+       border-radius: 15px;
+       margin: 10px;
+       outline: none;
+   }
+   
+   .lado .menuDesplegable a {
+       padding: 0;
+       margin-left: 8px;
+       border-radius: 10px;
+       background-color: rgb(253, 181, 122);
+       color: black;
+       text-decoration: none;
+       font-size: 15px;
+   }
+   
+   .active {
+       background-color: rgb(255, 142, 49);
+       color: white;
+   }
+   
+   .menuDesplegable {
+       /*De esta forma el menú desplegable lateral, por defecto estará oculto, y aparecerá cuando le demos a botonDesplegable*/
+       display: none;
+   }
+   
+   .menuDesplegable a:hover {
+       color: rgb(255, 86, 19);
+   }
+   
+   .fa-caret-down {
+       /*Estilo para el icono del menú desplegable*/
+       float: right;
+       padding: 7px 8px;
+   }
+   
+   .botonDesplegable:hover {
+       color: rgb(255, 86, 19);
+   }
+   
+   .icono {
+       /*Iconos según las estaciones*/
+       width: 20px;
+       height: auto;
+   }
+   
+   .contenido {
+    grid-area: contenido;
+       border-style: hidden;
+        grid-column: 2 / span 1;
+       grid-row: 3 / span 1;
+       background-color: #C0F0E9;
+       opacity: 0.95;
+       border-radius: 20px;
+       padding: 3%;
+       text-align: justify;
+       line-height: 1.5em;
+       overflow-y: auto;
+       overflow-x: hidden;
+   }
+   
+   .listasContenido {
+       /*Va a dar estilo a todas las listas que haya en la página*/
+       font-family: 'Acme', sans-serif;
+       margin-left: 2em;
+       list-style: circle;
+       font-size: 18px;
+   }
+   
+   .listasContenido li {
+       text-align: left;
+   }
+   
+   .listasContenido li ul li {
+       list-style: '- ';
+       margin-left: 20px;
+   }
+   
+   h2 {
+       font-family: 'Acme', sans-serif;
+       font-size: 26px;
+       font-weight: bolder;
+   }
+   
+   p {
+       font-family: 'Acme', sans-serif;
+       font-size: 18px;
+   }
+   
+   p a {
+       text-decoration: none;
+       color: black;
+   }
+   
+   p a:hover {
+       color: rgb(255, 86, 19);
+   }
+   
+   p a:active {
+       background-color: transparent;
+   }
+   
+   .parrafo2 {
+       /*Con esto hacemos que el párrafo no tenga nada a la izquierda, por lo que no nos sale a la altura de la foto que tiene al lado, sino por debajo*/
+       clear: left;
+   }
+   
+   .grande {
+       /*Css general para todas las imágenes del apartado Eventos*/
+       vertical-align: middle;
+       border-radius: 20px;
+       box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.45);
+       overflow: hidden;
+       animation-name: animacion;
+       animation-duration: 3s;
+       object-fit: contain;
+       cursor: pointer;
+   }
+   
+   .fotocerezo {
+       /*Después tenemos un css personalizado para cada imagen ya que según la zona en la que se encuetre, considero que queda mejor de un tamaño u otro*/
+       width: 60%;
+       height: auto;
+       float: right;
+       margin: 20px 0 20px 35px;
+   }
+   
+   .fotohuevos {
+       width: 35%;
+       height: auto;
+       float: left;
+       margin: 20px 40px 20px 0;
+   }
+   
+   .fotocaza {
+       width: 60%;
+       height: auto;
+       margin: 20px 0 20px 20px;
+       float: right;
+   }
+   
+   .fotonaturaleza {
+       width: 40%;
+       height: auto;
+       float: right;
+       margin: 20px 0 20px 30px;
+   }
+   
+   .fotomayo {
+       width: 35%;
+       height: auto;
+       float: left;
+       margin: 10px 40px 20px 0;
+   }
+   
+   .fotomuseo {
+       width: 45%;
+       height: auto;
+       float: right;
+       margin: 20px 0 20px 30px;
+   }
+   
+   .contenedor-fotos {
+       display: inline-block;
+   }
+   
+   .fotoboda1 {
+       margin: 20px 0;
+       float: left;
+       width: 48%;
+       height: auto;
+   }
+   
+   .fotoboda2 {
+       margin: 20px 0;
+       float: right;
+       width: 48%;
+       height: auto;
+   }
+   
+   .fotofuegos {
+       margin-top: 30px;
+       float: right;
+       width: 50%;
+       height: auto;
+   }
+   
+   .fotocalabaza {
+       float: right;
+       margin-left: 20px;
+       width: 40%;
+       height: auto;
+   }
+   
+   .halloween {
+       margin: 0 10px 5px 0;
+       float: left;
+       width: 35%;
+       height: auto;
+   }
+   
+   .pavo {
+       float: right;
+       margin-left: 20px;
+       width: 50%;
+       height: auto;
+   }
+   
+   .juguete {
+       margin: 0 10px 5px 0;
+       float: left;
+       width: 35%;
+       height: auto;
+   }
+   
+   .añonuevo {
+       float: right;
+       margin-left: 20px;
+       width: 40%;
+       height: auto;
+   }
+   
+   .carnaval {
+       margin: 0 10px 5px 0;
+       float: left;
+       width: 35%;
+       height: auto;
+   }
+   
+   .pesca {
+       float: right;
+       margin-left: 20px;
+       margin-bottom: 15px;
+       width: 50%;
+       height: auto;
+   }
+   
+   .bichos {
+       margin: 0 10px 5px 0;
+       float: left;
+       width: 35%;
+       height: auto;
+   }
+   
+   .cumple1 {
+       margin: 20px 0;
+       float: left;
+       width: 48%;
+       height: auto;
+   }
+   
+   .cumple2 {
+       margin: 20px 0;
+       float: right;
+       width: 48%;
+       height: auto;
+   }
+   
+   .lluvia {
+       float: right;
+       margin-left: 20px;
+       margin-bottom: 15px;
+       width: 50%;
+       height: auto;
+   }
+   
+   .nabos1 {
+       margin: 20px 0;
+       float: left;
+       width: 48%;
+       height: auto;
+   }
+   
+   .nabos2 {
+       margin: 20px 0;
+       float: right;
+       width: 48%;
+       height: auto;
+   }
+   
+   .darkModeSwitch {
+       background: #3494b1;
+       cursor: pointer;
+       display: inline-flex;
+       position: relative;
+       outline: none;
+       padding: 3px;
+       border: none;
+       border-radius: 15px;
+       align-items: center;
+       justify-content: space-between;
+       margin-left: 10px;
+   }
+   
+   .darkModeSwitch span {
+       width: 30px;
+       height: 30px;
+       line-height: 30px;
+       display: block;
+       color: #fff;
+       background: none;
+   }
+   
+   .darkModeSwitch::after {
+       display: block;
+       background: #fffbf5;
+       width: 2.3rem;
+       height: 2.3rem;
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: unset;
+       border-radius: 3rem;
+       transition: all .5s ease;
+       box-shadow: 0 0 2px 2px rgba(0, 0, 0, .5);
+       content: "";
+   }
+   
+   .darkModeSwitch.active {
+       background: #fdd384;
+   }
+   
+   .darkModeSwitch.active::after {
+       left: unset;
+       right: 0;
+   }
+   
+   body.dark {
+       background-color: darkslategrey;
+       background-image: none;
+   }
+   
+   body.dark .contenido {
+       background-color: #2f7e72;
+       color: #dddbdb;
+   }
+   
+   body.dark h2 {
+       color: black;
+   }
+   
+   body.dark .menu,
+   body.dark .menuResponsive,
+   body.dark .menu_bar {
+       background-color: rgb(28, 73, 73);
+   }
+   
+   body.dark .menu a:hover {
+       background-color: #828282;
+       color: black;
+   }
+   
+   body.dark .activo {
+       background-color: #828282;
+   }
+   
+   body.dark .lado {
+       background-image: none;
+       background-color: rgb(28, 73, 73);
+   }
+   
+   body.dark .botonDesplegable {
+       background-color: #2f7e72;
+   }
+   
+   body.dark .botonDesplegable:hover {
+       color: white;
+   }
+   
+   body.dark .lado a {
+       background-color: #2f7e72;
+   }
+   
+   body.dark .lado a:hover {
+       color: white;
+   }
+   
+   body.dark #conectado {
+       color: #3494b1;
+   }
+   
+   @keyframes animacion {
+       /*Animación de las imágenes para que aparezcan poco a poco al cargar la página*/
+       from {
+           opacity: 0;
+       }
+       to {
+           opacity: 1;
+       }
+   }
+   
+   .grande:hover {
+       /*Efecto que al pasar el ratón por encima de la foto, la vuelve un poco transparente.*/
+       opacity: 0.8;
+   }
+   
+   @media only screen and (max-width: 640px) {
+       .marco {
+           grid-template-columns: 96px auto;
+           grid-template-rows: 193px 0px auto 0px;
+       }
+       .palabras,
+       .hoja,
+       .darkModeSwitch,
+       .menu {
+           /*Las palabras del menú lateral desaparecen y sólo quedan los iconos*/
+           display: none;
+       }
+       header nav {
+           width: 80%;
+           height: 100%;
+           margin: 0;
+           position: fixed;
+       }
+       .menuResponsive {
+           display: block;
+           overflow: hidden;
+           height: 100%;
+           left: -100%;
+           width: 60%;
+           text-align: center;
+           background-color: #FFCE29;
+           border-radius: 10px;
+           z-index: 1;
+       }
+       .menuResponsive ul {
+           list-style: none;
+           padding: 20px;
+           padding-top: 0px;
+           padding-bottom: 0px;
+       }
+       .menuResponsive ul li {
+           margin: 10px;
+           display: inline-block;
+           position: relative;
+       }
+       .menuResponsive ul li a {
+           display: block;
+           font-size: 20px;
+           font-family: 'Londrina Solid', cursive;
+           color: black;
+           text-align: center;
+           padding: 14px 16px;
+           font-weight: bolder;
+           text-decoration: none;
+       }
+       .menuResponsive ul li a:hover {
+           background-color: white;
+           border-radius: 15px;
+           height: 100%;
+           color: #C75A00;
+           font-size: 1.5em;
+           padding: 11px 13px;
+       }
+       .menuResponsive ul li {
+           display: block;
+           float: none;
+       }
+       .menu_bar {
+           display: block;
+           width: 20%;
+           position: static;
+           background: #FFCE29;
+           border-radius: 10px;
+       }
+       .menu_bar .bt-menu {
+           display: block;
+           padding: 15px;
+           text-decoration: none;
+       }
+       .menu_bar a {
+           text-decoration: none;
+           font-size: 20px;
+           font-family: 'Londrina Solid', cursive;
+           color: black;
+           text-align: center;
+           font-weight: bolder;
+       }
+       .logo {
+           margin: auto;
+           width: 200px;
+           height: auto;
+           margin-left: 30%;
+       }
+       .lado a,
+       .botonDesplegable {
+           width: 80%;
+       }
+       .imagenResponsive {
+           vertical-align: auto;
+           width: 100%;
+           padding: 0;
+           margin: 0 0 20px 0;
+       }
+       .menuDesplegable {
+           padding-left: 0px;
+       }
+       .menuDesplegable a {
+           font-size: small;
+           margin-left: 0;
+       }
+       .darkModeSwitchResponsive {
+           background: #3494b1;
+           cursor: pointer;
+           display: inline-flex;
+           position: relative;
+           outline: none;
+           padding: 3px;
+           border: none;
+           border-radius: 15px;
+           align-items: center;
+           justify-content: space-between;
+       }
+       .darkModeSwitchResponsive span {
+           width: 30px;
+           height: 30px;
+           line-height: 30px;
+           display: block;
+           color: #fff;
+           background: none;
+       }
+       .darkModeSwitchResponsive::after {
+           display: block;
+           background: #fffbf5;
+           width: 2.3rem;
+           height: 2.3rem;
+           position: absolute;
+           top: 0;
+           left: 0;
+           right: unset;
+           border-radius: 3rem;
+           transition: all .5s ease;
+           box-shadow: 0 0 2px 2px rgba(0, 0, 0, .5);
+           content: "";
+       }
+       .darkModeSwitchResponsive.active {
+           background: #fdd384;
+       }
+       .darkModeSwitchResponsive.active::after {
+           left: unset;
+           right: 0;
+       }
+   }

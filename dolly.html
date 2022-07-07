@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+Web o pagina: Proyecto Final 1º DAM
+Autor: Mª Carmen Arias de Haro
+Fecha: Junio 2021
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- importante SEO para la etiqueta del navegador -->
+    <title>Animal Crossing</title>
+
+    <!-- una fuente de Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet" />
+
+    <!-- una hoja de estilos personalizada-->
+    <link href="./css/cssdolly.css" rel="stylesheet" />
+    <link href="./css/fonts.css" rel="stylesheet" />
+
+    <!-- iconos u otros elementos externos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- scripts externos de librerias JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="marco">
+        <header class="encabezado">
+            <div class="menu">
+                <a class="pdf" href="./docs/dollyzoom.pdf" target="_blank">Abrir PDF</a>
+                <p id="conectado"></p>
+                <a class="volver" href="index.html">Volver</a>
+            </div>
+        </header>
+
+        <section class="contenido">
+            <!-- Contenido con la imagen que tiene efecto Dolly -->
+            <div class="container">
+                <div class="front"><img src="./media/fotos/Dolly/personaje.png" alt="Personaje Animal Crossing" /></div>
+                <div class="background"><img src="./media/fotos/Dolly/fondoisla.jpg" alt="Isla Desierta" /></div>
+            </div>
+
+            <!-- Div con el texto que se muestra sólo en móvil, ya que ahí no muestra el efecto de la foto -->
+            <div class="oculto">
+                <p>Este efecto de imagen no puede mostrarse en un tamaño de pantalla inferior a <strong>900px</strong>. Lo sentimos, inténtelo en otro dispositivo.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="./js/jslogin.js"></script>
+</body>

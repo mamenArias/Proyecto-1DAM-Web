@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+Web o pagina: Proyecto Final 1º DAM
+Autor: Mª Carmen Arias de Haro
+Fecha: Junio 2021
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <!-- importante SEO para la etiqueta del navegador -->
+    <title>Animal Crossing</title>
+
+    <!-- CSS agregados-->
+    <link href="./css/cssproyectoindex.css" rel="stylesheet" />
+    <link href="./css/fonts.css" rel="stylesheet" />
+
+    <!-- iconos u otros elementos externos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- scripts externos de libreria JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="marco">
+        <header class="encabezado">
+            <div id="logo">
+                <!-- Botón para el modo noche/día -->
+                <button class="darkModeSwitch" id="switch">
+                    <span><i class="fa fa-sun-o"></i></span>   
+                    <span><i class="fa fa-moon-o"></i></span></button>
+                <!-- Logo principal de la página -->
+                <img class="logo" src="./media/logo.png" alt="Animal Crossing">
+                <!-- Información sobre la creación de la página, que redirige a la página de Cenec al clickar encima -->
+                <a href="./trabajofinal.html"><img class="hoja" src="./media/hoja.png" alt="Proyecto Final Web"></a>
+            </div>
+
+            <!-- Botón del menú responsive-->
+            <div class="menu_bar">
+                <a href="#" class="bt-menu"><span class="icon-menu"></span></a>
+            </div>
+
+            <!-- Menú Responsive -->
+            <nav aria-label class="menuResponsive">
+                <ul>
+                    <li><a class="activo" href="index.html">Inicio</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="personajes.html">Personajes</a></li>
+                    <li><a href="edificios.html">Edificios</a></li>
+                </ul>
+                <button class="darkModeSwitchResponsive" id="switch2">
+                    <span><i class="fa fa-sun-o"></i></span>   
+                    <span><i class="fa fa-moon-o"></i></span></button>
+            </nav>
+
+            <!-- Menú normal de la página-->
+            <nav aria-label class="menu">
+                <ul>
+                    <li><a class="activo" href="index.html">Inicio</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="personajes.html">Personajes</a></li>
+                    <li><a href="edificios.html">Edificios</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Contenido de la página -->
+        <section class="contenido">
+            <img class="logo2" src="./media/logo2.png" alt="Nooks Island">
+
+            <h1>Animal Crossing: New Horizons</h1>
+
+            <p>Es un videojuego de simulación social desarrollado y publicado por Nintendo para Nintendo Switch, cuya fecha de lanzamiento mundial fue el 20 de marzo de 2020. Es la novena entrega de la saga Animal Crossing (Incluyendo su edición para dispositivos
+                móviles).
+                <br> Como en entregas previas de la serie Animal Crossing, New Horizons es un videojuego no lineal de simulación de vida a tiempo real. El jugador asume el papel de un personaje personalizable que se mueve por una isla desierta tras comprarle
+                un pack de vacaciones a Tom Nook, un mapachito gracioso que no dejará de pedirte dinero durante todo el juego. El juego procede a una forma de jugar infinita mientras el jugador explora la isla, y desarrolla una comunidad de animales antropomórficos.<br>                Al comienzo del juego, tan sólo dispondrás de una tienda de campaña, con una cama y una radio. A partir de ahí <b>comienza tu aventura</b>. Tendrás que pescar y cazar bichos para dárselos a Sócrates, un búho con entomofobia, que pese a
+                todo es muy bueno en su trabajo y se encargará de abrir un Museo cuando le lleves suficientes ejemplares para inaugurarlo. Además, podrás construir tus propias herramientas con los materiales que te encuentres por la isla, como rocas,
+                madera y hierbajos, y a partir de ahí, con nuevos proyectos, construir tus propios muebles.
+            </p>
+
+            <!-- Carrusel de imágenes -->
+            <div class="slide">
+                <div class="slide-inner">
+                    <input class="slide-open" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden="" checked="checked">
+                    <div class="slide-item">
+                        <img src="./media/fotos/Inicio juego/comienzo.jpg" alt="Comienzo del juego">
+                    </div>
+                    <input class="slide-open" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="">
+                    <div class="slide-item">
+                        <img src="./media/fotos/Inicio juego/comienzo1.jpg" alt="Tienda de campaña">
+                    </div>
+                    <input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
+                    <div class="slide-item">
+                        <img src="./media/fotos/Inicio juego/primeracasa.jpg" alt="Primera casa">
+                    </div>
+                    <label for="slide-3" class="slide-control prev control-1">‹</label>
+                    <label for="slide-2" class="slide-control next control-1">›</label>
+                    <label for="slide-1" class="slide-control prev control-2">‹</label>
+                    <label for="slide-3" class="slide-control next control-2">›</label>
+                    <label for="slide-2" class="slide-control prev control-3">‹</label>
+                    <label for="slide-1" class="slide-control next control-3">›</label>
+                    <ol class="slide-indicador">
+                        <li>
+                            <label for="slide-1" class="slide-circulo">•</label>
+                        </li>
+                        <li>
+                            <label for="slide-2" class="slide-circulo">•</label>
+                        </li>
+                        <li>
+                            <label for="slide-3" class="slide-circulo">•</label>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <p>
+                Pero no siempre vas a vivir en esa tienda de campaña. Podrás hablar con Toom Nook, nuestro <i>querido</i> mapache avaricioso, para que nos construya una casa. Eso sí, con hipoteca, la cual deberemos ir pagando poco a poco con cada mejora
+                que le pidamos. También podremos construir rampas y puentes en la isla, para acceder a los rincones que al principio del juego, nos parecen inalcanzables.<br>
+            </p>
+            <img class="separador" src="./media/separador.png" alt="Separador de texto">
+            <img class="foto" src="./media/imagen.png" alt="Regar flores">
+            <p>
+                Podemos personalizar nuestra isla poco a poco, añadiendo vegetación (pinos, caducifolios y árboles frutales), muebles y objetos decorativos que podremos encontrar en los árboles, en la tienda, o construir nosotros directamente. Y por supuesto, también
+                podremos decorar el interior de nuestra casa. Además, tanto la decoración interior como la exterior tendrán su puntuación: la exterior nos dará estrellas a la isla, cuantas más tengamos mejor, y además, nos darán un regalito al llegar
+                a las 5 estrellas. Respecto a la interior, la Academia de Artes Decorativas nos puntuará cada semana, dándonos premios cada vez que mejoremos.
+            </p>
+            <p>
+                Otra opción que tendremos en nuestra isla será la de plantar flores. Cada vez que la reguemos, estas irán creciendo y reproduciéndose, dando lugar a flores nuevas si las mezclamos entre sí, y podemos llegar a tener una gran variedad de flores y de colores
+                diferentes. Los días de lluvia (o de nieve) también nos ayudarán a que crezcan.
+            </p>
+            <p>
+                Además, también podrás hacer coronas de flores, tanto para decorar la puerta de tu casa y la de los vecinos, como para ponértelas en el pelo. Porque, por supuesto, podrás comprarte ropa (o incluso fabricar algunos modelitos) ¡en la tienda de las Hermanas
+                Manitas!
+            </p>
+            <img class="separador" src="./media/separador.png" alt="Separador de texto">
+            <p>
+                Otra de las características de este juego es que tiene modo multijugador, es decir, podremos viajar a las islas de nuestros amigos y ellos podrán visitar la nuestra. Esto nos vienen bien para recolectar diferentes tipos de fruta (cada isla tiene la suya
+                propia), para visitar las tiendas de nuestros amigos (ropa y muebles), para hacer competiciones de pesca y de caza con el cronómetro, o simplemente para pasar el rato con ellos, pasear por la isla, etc.<br> Para acceder
+                al modo multijugador, tan sólo necesitáis pagar el Nintendo Online y disponer de internet. En el aeródromo, cuando quieras viajar a otra isla te pedirá un código, que te mandará tu amigo, y con él ya podrás viajar a su isla. Además, si
+                os agregáis como amigos, podréis intercambiar objetos mediante postales, que también las tendréis disponibles en el aeródromo.
+            </p>
+            <div class="contenedor-fotos">
+                <img class="multijugador imagenResponsive" src="./media/fotos/online.jpeg" alt="Modo multijugador">
+                <img class="multijugador2 imagenResponsive" src="./media/fotos/online2.jpg" alt="Modo multijugador">
+            </div><br>
+            <img class="separador" src="./media/separador.png" alt="Separador de texto">
+            <p>
+                En esta nueva aventura también dispondremos de un Nookófono, un dispositivo desde el que podremos: ver los objetivos diarios y los logros del juego, abrir la enciclopedia para comprobar los insectos y los peces que hemos consguido hasta el momento, chatear
+                con nuestros amigos, ver los proyectos que hemos conseguidor, almacenar diseños, realizar obras en la isla, acceder a la tienda, y un largo etcétera.
+                <br>
+                <br>
+                <a class="boton" href="https://www.amazon.es/Nintendo-Animal-crossing-Switch/dp/B07HCVN3D1/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=23CZY66EUOPC9&dchild=1&keywords=animal+crossing+nintendo+switch&qid=1618311076&sprefix=animal+crossing%2Caps%2C284&sr=8-1"
+                    target="_blank">¡Cómpralo!</a>
+            </p>
+
+            <div class="contenidoAudiovisual">
+                <img class="juego" src="./media/juegodecorado.png" alt="Juego Animal Crossing">
+                <iframe class="video" src="https://www.youtube.com/embed/lpC7r6AdJBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- Información sobre la creación de la página, que redirige a la página de Cenec al clickar encima, pero en este caso es cuando sea responsive -->
+            <a href="./trabajofinal.html"><img class="hojaResponsive" src="./media/hoja.png" alt="Mª Carmen Arias - CENEC"></a>
+        </section>
+
+        <!-- Se agregan los Javascript que vamos a usar en cada página -->
+        <script src="./js/jsproyecto.js"></script>
+        <script src="./js/jslogin.js"></script>
+
+</body>
+
+</html>

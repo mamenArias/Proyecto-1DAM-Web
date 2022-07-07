@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+Web o pagina: Proyecto Final 1º DAM
+Autor: Mª Carmen Arias de Haro
+Fecha: Junio 2021
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- importante SEO para la etiqueta del navegador -->
+    <title>Animal Crossing</title>
+
+
+    <!-- una hoja de estilos personalizada-->
+    <link href="./css/csspersonajes.css" rel="stylesheet" />
+    <link href="./css/fonts.css" rel="stylesheet" />
+
+    <!-- iconos u otros elementos externos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body onload="ocultar()">
+    <div class="marco">
+        <header class="encabezado">
+            <div id="logo">
+                <button class="darkModeSwitch" id="switch">
+                    <span><i class="fa fa-sun-o"></i></span>   
+                    <span><i class="fa fa-moon-o"></i></span></button>
+                <img class="logo" src="./media/logo.png">
+                <a href="./trabajofinal.html"><img class="hoja" src="./media/hoja.png" alt="Proyecto Final Web"></a>
+            </div>
+
+            <div class="menu_bar">
+                <a href="#" class="bt-menu"><span class="icon-menu"></span></a>
+            </div>
+
+            <nav aria-label class="menuResponsive">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a class="activo" href="personajes.html">Personajes</a></li>
+                    <li><a href="edificios.html">Edificios</a></li>
+                    <button class="darkModeSwitchResponsive" id="switch2">
+                        <span><i class="fa fa-sun-o"></i></span>   
+                        <span><i class="fa fa-moon-o"></i></span></button>
+                </ul>
+            </nav>
+
+            <nav aria-label class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a class="activo" href="personajes.html">Personajes</a></li>
+                    <li><a href="edificios.html">Edificios</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="lado"></div>
+        <div class="contenido contenido-personajes">
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/toomnook.png" alt="Toom Nook">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Toom Nook</h2><br>
+                        <p>El mapache más famoso de toda la saga. Es el responsable del Plan de Asentamiento en las Islas Desiertas. Con su ayuda conseguiremos ampliar nuestro hogar y mejorar nuestra isla.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/canela.png" alt="Canela">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Canela</h2><br>
+                        <p>Aparecerá cuando consigamos el Centro de Gestión Vecinal. Hablando con ella podremos cambiar la música de la isla, la bandera, medir el nivel de popularidad de nuestra isla e incluso resolver problemas con otros residentes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/tendoynendo.png" alt="Tendo y Nendo">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Tendo y Nendo</h2><br>
+                        <p>Estos mapachitos hermanos y sobrinos de Toom Nook serán los encargados de vendernos muebles, semillas y otras muchas cosas en su maravillosa tienda, además de poder venderle cosas y los famosos nabos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/socrates.png" alt="Sócrates">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Sócrates</h2><br>
+                        <p>Este búho erudito es el responsable del Museo de tu isla. Podrás llevarle peces, fósiles e insectos para ir mejorando su catálogo y poder completarlo poco a poco. Eso sí, no esperes que muestre mucho agrado por los insectos...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/estela.png" alt="Estela">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Estela</h2><br>
+                        <p>Es la hermana menor de Sócrates. Aparecerá cada vez que haya estrellas fugaces en la isla, y nos enseñará cómo pedir deseos, además de darnos recetas nuevas relacionadas con esta temática.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/totakeke.png" alt="Totakeke">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Totakeke</h2><br>
+                        <p>Este cantautor tan famoso de la saga aparecerá cuando nuestra isla tenga 3 estrellas o más. En ese caso, vendrá cada sábado para darnos un concierto especial, donde podremos pedirle canciones concretas o dejar que improvise.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/piliymili.png" alt="Pili y Mili">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Pili y Mili</h2><br>
+                        <p>Son las encargadas de la sastrería 'Hermanas Manitas', donde podremos comprar ropa para personalizar a nuestro personaje, además de conjuntos especiales para los eventos más importantes del año.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/tili.png" alt="Tili">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Tili</h2><br>
+                        <p>Una vez tengamos la tienda de las Hermanas Manitas, Tili, la modista independiente y la tercera de las hermanas puercoespín, podrá visitarnos. Al hablar con ella nos pedirá participar en un reto de estilo de moda con un tema concreto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/rafayrodri.png" alt="Rafa y Rodri">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Rafa y Rodri</h2><br>
+                        <p>Son los encargados del aeródromo de tu isla. Rafa se encarga de canjear tus viajes, y Rodri es el piloto, y quien te ayudará si necesitas algo cuando llegues a islas nuevas, donde podrás recoger materiales o vecinos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/alcatifa.png" alt="Alcatifa">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Alcatifa</h2><br>
+                        <p>Esta camella vende alfombras, papeles de pared y suelos mágicos para decorar el hogar del jugador. Además en función de las alfombras que le compres te dará cupones que pueden canjearse después por papel de pared y suelos aleatorios.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/betunio.png" alt="Betunio">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Betunio</h2><br>
+                        <p>Esta mofeta tan educada aparecerá una vez hayamos desbloqueado la tienda de las Hermanas Manitas. Cuando haga acto de aparición nos venderá zapatos, calcetines, medias, y las nuevas mochilas y bolsos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/buh.png" alt="Buh">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Buh</h2><br>
+                        <p>Este simpático fantasma se asustará de nosotros, separando su esencia en cinco espectros que tendremos que buscar y atrapar con la red por la isla. Al entregárselos, nos regalará o un objeto que no tengamos, o un objeto muy caro.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/fauno.png" alt="Fauno">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Fauno</h2><br>
+                        <p>Este perro hippie aparecerá una vez que tengamos MiniNook. Entonces nos invitará a ir a cayo Fauno cuando nos plazca, es su pequeña isla personal en la que encontraremos un estudio de fotografía.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/cj.png" alt="CJ">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>CJ</h2><br>
+                        <p>Es un castor apasionado por el mundo de los peces que nos propone desafíos de pesca. Gestiona el Torneo de Pesca y podremos venderle peces a un precio mayor que el habitual, y nos permitirá crear modelos decorativos de peces.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/kamilo.png" alt="Kamilo">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Kamilo</h2><br>
+                        <p>Es un entusiasta de la Caza de Bichos. Este camaleón nos comprará los insectos a un precio un 50% superior a que si lo vendiéramos en la tienda. Además, nos hará una figura a modo de efigie de ese insecto que pidamos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/ladino.png" alt="Ladino">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Ladino</h2><br>
+                        <p>En su Navío Ambulante, cada vez que aparezca, podremos comprarle cuadros, esculturas... para donar al Museo, eso sí, habrá que andarse con mucho ojo, porque nos puede vender falsificaciones sin que nos demos cuenta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/juliana.png" alt="Juliana">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Juliana</h2><br>
+                        <p>Solo aparece una vez que la Tienda MiniNook haya abierto. Es la única a la que podemos comprar nabos para entrar en el negocio de la especulación y venderlos a precios superiores durante la semana.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/gullivervar.png" alt="Gulliver/Gullivarr">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Gulliver/Gullivarr</h2><br>
+                        <p>Es un marinero con forma de gaviota aparecerá cual náufrago en la playa. Nos pedirá encontrar cinco piezas para reparar su comunicador y nos mandará un regalo al día siguiente. Gulivarr es su versión alteranativa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/pascal.png" alt="Pascal">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Pascal</h2><br>
+                        <p>Esta nutria puede aparecer de forma aleatoria tras recoger vieiras en el fondo del mar. Nos pedirá que se las entreguemos y nos regalará unas recetas de bricolaje especiales con temática de sirena, o también perlas en raras ocasiones.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="flip-image" src="./media/fotos/Personajes/gandulio.png" alt="Gandulio">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Gandulio</h2><br>
+                        <p>Es un perezoso que lleva un Puesto de Jardinería, en el que vende productos como semillas para plantar flores o incluso nuevos tipos de arbustos para decorar el lugar. También podemos venderle hierbajos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="./js/jsproyecto.js"></script>
+    <script src="./js/jslogin.js"></script>
+</body>
+
+</html>

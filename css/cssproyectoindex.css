@@ -1,0 +1,721 @@
+            /*CSS
+Web o pagina: Proyecto Final 1º DAM
+Autor: Mª Carmen Arias de Haro
+Fecha: Junio 2021*/
+            
+            @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&family=New+Tegomin&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            
+            body {
+                background-color: gainsboro;
+                background-image: url("../media/fondo.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            .marco {
+                /*Se ha hecho una página con diseño de grilla*/
+                display: grid;
+                grid-template-areas: 
+                    "encabezado encabezado encabezado encabezado"
+                    "menu menu menu menu"
+                    "contenido contenido contenido contenido";
+                height: 100vh;
+            }
+            
+            .encabezado {
+                grid-area: encabezado;
+                border-style: none;
+                grid-column: 1 / span 2;
+                /* empieza en la primera columna y pasa a la última con un espacio en medio*/
+                grid-row: 1 / span 1;
+                height: auto;
+            }
+            
+            header nav {
+                z-index: 1000;
+            }
+            
+            .logo {
+                /*Logo fijo de la página*/
+                margin: auto;
+                width: 200px;
+                height: auto;
+                margin-left: 37%;
+            }
+            
+            .hoja {
+                /*Pequeña hoja que se muestra arriba a la derecha que nos lleva a la página personal del alumno*/
+                float: right;
+                margin-top: 10px;
+                margin-right: 20px;
+                padding: 0;
+                width: 125px;
+                height: auto;
+            }
+            
+            .hoja:hover {
+                transform: scale(1.3);
+            }
+            
+            .logo2 {
+                width: 25%;
+                height: auto;
+                margin: 3% 35%;
+                animation-name: animacion2;
+                animation-duration: 3s;
+            }
+            
+            .menu {
+                grid-area: menu;
+                background-color: #FFCE29;
+                border-radius: 20px;
+            }
+
+            .menu > ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+            }
+            
+            .menu a {
+                display: block;
+                padding: 20px;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                margin: 10px;
+                font-size: 20px;
+                font-family: 'Londrina Solid', cursive;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                font-weight: bolder;
+                text-decoration: none;
+                transition: all .3s;
+            }
+            
+            .menu a:hover {
+                background-color: white;
+                border-radius: 15px;
+                height: 100%;
+                color: #C75A00;
+                font-size: 1.5em;
+                padding: 11px 13px;
+            }
+            
+            .activo {
+                /*Css para cuando estamos en una página del menú, que su opción en el menú se mantenga distinta resaltando que estamos ahí*/
+                background-color: white;
+                border-radius: 15px;
+                height: 100%;
+            }
+            
+            .contenido {
+                /*Donde va todo el contenido de la página*/
+                grid-area: contenido;
+                border-style: hidden;
+                grid-column: 1 / span 2;
+                grid-row: 3 / span 1;
+                background-color: #C0F0E9;
+                border-radius: 20px;
+                text-align: justify;
+                line-height: 1.5em;
+                opacity: 0.98;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+            
+            h1,
+            p {
+                padding-left: 10%;
+                padding-right: 10%;
+                font-family: 'Acme', sans-serif;
+                font-size: 20px;
+            }
+            
+            .contenedorVideos {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 10px 5% 10px 5%;
+            }
+            
+            .videoOculto {
+                margin: 2% 5% 2% 3%;
+                width: 560px;
+                height: 315px;
+                box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.45);
+            }
+            
+            .oculto {
+                text-align: center;
+                font-family: 'Acme', sans-serif;
+                font-size: 25px;
+                font-weight: bold;
+                color: rgb(255, 86, 19);
+            }
+            
+            #conectado {
+                /*CSS del nombre cuando se conecta el usuario*/
+                color: blue;
+                font-family: 'Acme', sans-serif;
+                font-size: 20px;
+                display: inline-block;
+            }
+            
+            input {
+                background-color: #fab378;
+                color: black;
+                padding: 0.2%;
+                font-family: 'Acme', sans-serif;
+                font-size: 18px;
+                border-radius: 10px;
+            }
+            
+            #login {
+                text-align: center;
+                font-family: 'Acme', sans-serif;
+                font-size: 18px;
+                margin-top: 30px;
+            }
+            
+            #login input {
+                font-size: larger;
+            }
+            
+            .botonLogin {
+                background-color: #FFCE29;
+                text-align: center;
+                font-family: 'Acme', sans-serif;
+                font-size: 18px;
+                padding: 8px;
+                border-radius: 15px;
+            }
+            
+            body.dark .botonLogin {
+                background-color: #022935;
+                color: white;
+            }
+            
+            body.dark input {
+                background-color: #8aacb6;
+            }
+            
+            .imgInicioSesion {
+                width: 27%;
+                height: auto;
+                margin: 2% 0 2% 36%;
+            }
+            
+            .separador {
+                width: 40%;
+                height: auto;
+                margin: 1% 30%;
+            }
+            
+            .foto {
+                margin: 0% 4%;
+                float: right;
+                width: 13%;
+                height: auto;
+                vertical-align: super;
+            }
+            
+            .slide {
+                /*Css del carrusel de imágenes*/
+                position: relative;
+                margin-top: 26px;
+            }
+            
+            .slide-inner {
+                position: relative;
+                overflow: hidden;
+                width: 40%;
+                height: auto;
+                border-radius: 15px;
+                margin: 2% 30%;
+            }
+            
+            .slide-open:checked+.slide-item {
+                position: static;
+                opacity: 100;
+            }
+            
+            .slide-item {
+                position: absolute;
+                opacity: 0;
+                -webkit-transition: opacity 0.6s ease-out;
+                transition: opacity 0.6s ease-out;
+            }
+            
+            .slide-item img {
+                display: block;
+                height: auto;
+                max-width: 100%;
+            }
+            
+            .slide-control {
+                background: rgba(0, 0, 0, 0.28);
+                border-radius: 50%;
+                color: #fff;
+                cursor: pointer;
+                display: none;
+                font-size: 40px;
+                height: 40px;
+                line-height: 35px;
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translate(0, -50%);
+                cursor: pointer;
+                -ms-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+                text-align: center;
+                width: 40px;
+                z-index: 10;
+            }
+            
+            .slide-control.prev {
+                left: 2%;
+            }
+            
+            .slide-control.next {
+                right: 2%;
+            }
+            
+            .slide-control:hover {
+                background: rgba(0, 0, 0, 0.8);
+                color: #aaaaaa;
+            }
+            
+            #slide-1:checked~.control-1,
+            #slide-2:checked~.control-2,
+            #slide-3:checked~.control-3 {
+                display: block;
+            }
+            
+            .slide-indicador {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                bottom: 2%;
+                left: 0;
+                right: 0;
+                text-align: center;
+                z-index: 10;
+            }
+            
+            .slide-indicador li {
+                display: inline-block;
+                margin: 0 5px;
+            }
+            
+            .slide-circulo {
+                color: #828282;
+                cursor: pointer;
+                display: block;
+                font-size: 35px;
+            }
+            
+            .slide-circulo:hover {
+                color: #aaaaaa;
+            }
+            
+            #slide-1:checked~.control-1~.slide-indicador li:nth-child(1) .slide-circulo,
+            #slide-2:checked~.control-2~.slide-indicador li:nth-child(2) .slide-circulo,
+            #slide-3:checked~.control-3~.slide-indicador li:nth-child(3) .slide-circulo {
+                color: #428bca;
+            }
+            /*#titulo {
+                width: 100%;
+                position: absolute;
+                padding: 0px;
+                margin: 0px auto;
+                text-align: center;
+                font-size: 27px;
+                color: rgba(255, 255, 255, 1);
+                font-family: 'Open Sans', sans-serif;
+                z-index: 9999;
+                text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+            }*/
+            
+            .contenidoAudiovisual {
+                display: flex;
+            }
+            
+            .juego {
+                display: block;
+                margin: 2% 3% 2% 15%;
+                width: 35%;
+                height: auto;
+            }
+            
+            .video {
+                margin: 2% 5% 2% 3%;
+                width: 560px;
+                height: 315px;
+                box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.45);
+            }
+            
+            .boton {
+                display: block;
+                margin: 0% 43%;
+                text-decoration: none;
+                padding: 10px;
+                font-weight: 600;
+                font-size: 20px;
+                color: black;
+                background-color: #ff9d4d;
+                border-radius: 15px;
+                border: 2px solid #C75A00;
+                text-align: center;
+            }
+            
+            .boton:hover {
+                background-color: #FF8B2B;
+                color: white;
+            }
+            
+            .contenedor-fotos {
+                display: inline-block;
+            }
+            
+            .multijugador {
+                margin: 20px 0 20px 10%;
+                float: left;
+                width: 40%;
+                height: auto;
+                border: solid;
+                border-color: white;
+            }
+            
+            .multijugador2 {
+                margin: 20px 10% 20px 0;
+                width: 40%;
+                float: right;
+                height: auto;
+                border: solid;
+                border-color: white;
+            }
+            
+            .menu_bar,
+            .menuResponsive,
+            .darkModeSwitchResponsive,
+            .hojaResponsive {
+                /*Se oculta todo lo que sólo está creado para el modo responsive*/
+                display: none;
+            }
+            
+            .darkModeSwitch {
+                /*Colores para el modo noche*/
+                background: #3494b1;
+                cursor: pointer;
+                display: inline-flex;
+                position: relative;
+                outline: none;
+                padding: 3px;
+                border: none;
+                border-radius: 15px;
+                align-items: center;
+                justify-content: space-between;
+                margin-left: 10px;
+            }
+            
+            .darkModeSwitch span {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                display: block;
+                color: #fff;
+                background: none;
+            }
+            
+            .darkModeSwitch::after {
+                display: block;
+                background: #fffbf5;
+                width: 2.3rem;
+                height: 2.3rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: unset;
+                border-radius: 3rem;
+                transition: all .5s ease;
+                box-shadow: 0 0 2px 2px rgba(0, 0, 0, .5);
+                content: "";
+            }
+            
+            .darkModeSwitch.active {
+                background: #fdd384;
+            }
+            
+            .darkModeSwitch.active::after {
+                left: unset;
+                right: 0;
+            }
+            
+            body.dark {
+                background-color: darkslategrey;
+                background-image: none;
+            }
+            
+            body.dark .contenido {
+                background-color: #2f7e72;
+                color: #dddbdb;
+            }
+            
+            body.dark .menu,
+            body.dark .menuResponsive,
+            body.dark .menu_bar {
+                background-color: rgb(28, 73, 73);
+            }
+            
+            body.dark .menu a:hover {
+                background-color: #828282;
+                color: black;
+            }
+            
+            body.dark .activo {
+                background-color: #828282;
+            }
+            
+            @keyframes animacion {
+                /*Animación al cargar la página que muestra las imágenes con un pequeña transición, de transparentes hasta que están con opacidad al 100%*/
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes animacion2 {
+                /*Animación del logo de la página de inicio que aparece por la izquierda*/
+                from {
+                    margin-left: -100%;
+                }
+                to {
+                    margin-left: 35%;
+                }
+            }
+            
+            @media only screen and (max-width: 640px) {
+                /*Opciones responsive para la pantalla móvil*/
+                @keyframes animacion2 {
+                    from {
+                        margin-left: -100%;
+                    }
+                    to {
+                        margin-left: 30%;
+                    }
+                }
+                .marco {
+                    grid-template-rows: 193px 0px auto 0px;
+                }
+                header nav {
+                    width: 80%;
+                    height: 100%;
+                    margin: 0;
+                    position: fixed;
+                }
+                .menuResponsive {
+                    display: block;
+                    overflow: hidden;
+                    height: 100%;
+                    left: -100%;
+                    width: 60%;
+                    text-align: center;
+                    background-color: #FFCE29;
+                    border-radius: 10px;
+                }
+                .menuResponsive ul {
+                    list-style: none;
+                    padding: 20px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                }
+                .menuResponsive ul li {
+                    margin: 10px;
+                    display: inline-block;
+                    position: relative;
+                }
+                .menuResponsive ul li a {
+                    display: block;
+                    font-size: 20px;
+                    font-family: 'Londrina Solid', cursive;
+                    color: black;
+                    text-align: center;
+                    padding: 14px 16px;
+                    font-weight: bolder;
+                    text-decoration: none;
+                }
+                .menuResponsive ul li a:hover {
+                    background-color: white;
+                    border-radius: 15px;
+                    height: 100%;
+                    color: #C75A00;
+                    font-size: 1.5em;
+                    padding: 11px 13px;
+                }
+                .menuResponsive ul li {
+                    display: block;
+                    float: none;
+                }
+                .menu_bar {
+                    display: block;
+                    width: 20%;
+                    position: static;
+                    background: #FFCE29;
+                    border-radius: 10px;
+                }
+                .menu_bar .bt-menu {
+                    display: block;
+                    padding: 15px;
+                    text-decoration: none;
+                }
+                .menu_bar a {
+                    text-decoration: none;
+                    font-size: 20px;
+                    font-family: 'Londrina Solid', cursive;
+                    color: black;
+                    text-align: center;
+                    font-weight: bolder;
+                }
+                .logo {
+                    margin: auto;
+                    width: 200px;
+                    height: auto;
+                    margin-left: 30%;
+                }
+                .hoja {
+                    display: none;
+                }
+                .logo2 {
+                    width: 35%;
+                    margin: 3% 30%;
+                }
+                .slide-inner {
+                    width: 80%;
+                    margin: 2% 10%;
+                }
+                .separador {
+                    width: 50%;
+                    margin: 1% 25%;
+                }
+                .foto {
+                    margin: 0% 4%;
+                    width: 25%;
+                    height: auto;
+                    vertical-align: super;
+                }
+                .contenidoAudiovisual {
+                    display: inline;
+                }
+                .video {
+                    margin: 0;
+                    width: 100%;
+                    height: auto;
+                }
+                .contenido {
+                    overflow-y: scroll;
+                    padding: 2%;
+                    border-style: solid;
+                    border-color: rgb(172, 179, 243);
+                    background-color: #C0F0E9;
+                    border-radius: 20px;
+                    grid-column: 1 / span 2;
+                    width: 100%;
+                }
+                .imgInicioSesion {
+                    width: 65%;
+                    margin-left: 18%;
+                    margin-top: 5%;
+                }
+                .juego {
+                    margin-left: 20%;
+                    width: 62%;
+                    height: auto;
+                }
+                .hojaResponsive {
+                    float: right;
+                    display: inline;
+                    margin-top: 30px;
+                    margin-right: 20px;
+                    padding: 0;
+                    width: 30%;
+                    height: auto;
+                }
+                .video {
+                    width: 100%;
+                    height: 58%;
+                }
+                .videoOculto {
+                    width: 100%;
+                    height: auto;
+                }
+                .boton {
+                    margin: 0% 30%;
+                }
+                .menu {
+                    visibility: hidden;
+                }
+                .imagenResponsive {
+                    vertical-align: auto;
+                    width: 100%;
+                    padding: 0;
+                    margin: 0 0 20px 0;
+                }
+                .darkModeSwitch {
+                    display: none;
+                }
+                .darkModeSwitchResponsive {
+                    background: #3494b1;
+                    cursor: pointer;
+                    display: inline-flex;
+                    position: relative;
+                    outline: none;
+                    padding: 3px;
+                    border: none;
+                    border-radius: 15px;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                .darkModeSwitchResponsive span {
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    display: block;
+                    color: #fff;
+                    background: none;
+                }
+                .darkModeSwitchResponsive::after {
+                    display: block;
+                    background: #fffbf5;
+                    width: 2.3rem;
+                    height: 2.3rem;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: unset;
+                    border-radius: 3rem;
+                    transition: all .5s ease;
+                    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .5);
+                    content: "";
+                }
+                .darkModeSwitchResponsive.active {
+                    background: #fdd384;
+                }
+                .darkModeSwitchResponsive.active::after {
+                    left: unset;
+                    right: 0;
+                }
+                body.dark .contenido {
+                    border-color: #022935;
+                }
+            }

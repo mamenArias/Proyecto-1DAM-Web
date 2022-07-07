@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+Web o pagina: Proyecto Final 1º DAM
+Autor: Mª Carmen Arias de Haro
+Fecha: Junio 2021
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- importante SEO para la etiqueta del navegador -->
+    <title>Animal Crossing</title>
+
+    <!-- una hoja de estilos personalizada-->
+    <link href="./css/cssproyecto.css" rel="stylesheet" />
+    <link href="./css/fonts.css" rel="stylesheet" />
+
+    <!-- iconos u otros elementos externos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- scripts externos de librerias JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://datoweb.com/visor/js/fresco/fresco.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://datoweb.com/visor/css/fresco/fresco.css" />
+
+</head>
+
+<body>
+    <div class="marco">
+        <header class="encabezado">
+            <div id="logo">
+                <button class="darkModeSwitch" id="switch">
+                    <span><i class="fa fa-sun-o"></i></span>   
+                    <span><i class="fa fa-moon-o"></i></span></button>
+                <img class="logo" src="./media/logo.png" alt="Animal Crossing">
+                <a href="./trabajofinal.html"><img class="hoja" src="./media/hoja.png" alt="Proyecto Final Web"></a>
+            </div>
+
+            <div class="menu_bar">
+                <a href="#" class="bt-menu"><span class="icon-menu"></span></a>
+            </div>
+
+            <nav aria-label class="menuResponsive">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a class="activo" href="eventos.html">Eventos</a></li>
+                    <li><a href="personajes.html">Personajes</a></li>
+                    <li><a href="edificios.html">Edificios</a></li>
+                    <button class="darkModeSwitchResponsive" id="switch2">
+                        <span><i class="fa fa-sun-o"></i></span>   
+                        <span><i class="fa fa-moon-o"></i></span></button>
+                </ul>
+            </nav>
+
+            <nav aria-label class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a class="activo" href="eventos.html">Eventos</a></li>
+                    <li><a href="personajes.html">Personajes</a></li>
+                    <li><a href="edificios.html">Edificios</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Menú lateral con el acceso rápido a los eventos mostrados en el contenido de la página-->
+        <section class="lado">
+            <button class="botonDesplegable"><img class="icono" src="./media/iconos/primavera.png" alt="Icono"> <span class="palabras">Primavera</span>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            <nav aria-label class="menuDesplegable">
+                <a href="#cerezo">Cerezo en Flor</a>
+                <a href="#huevo">Caza del Huevo</a>
+                <a href="#naturaleza">Día de la Naturaleza</a>
+                <a href="#mayo">Primero de Mayo</a>
+                <a href="#museos">Día de los Museos</a>
+            </nav>
+            <button class="botonDesplegable"><img class="icono" src="./media/iconos/verano.png" alt="Icono"> <span class="palabras">Verano</span>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            <div class="menuDesplegable">
+                <a href="#bodas">Temporada de Bodas</a>
+                <a href="#fuegos">Fuegos Artificiales</a>
+            </div>
+            <button class="botonDesplegable"><img class="icono" src="./media/iconos/otoño.jpg" alt="Icono"> <span class="palabras">Otoño</span>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            <div class="menuDesplegable">
+                <a href="#calabazas">Temporada de Calabazas</a>
+                <a href="#halloween">Halloween</a>
+                <a href="#pavo">Día del Pavo</a>
+            </div>
+            <button class="botonDesplegable"><img class="icono" src="./media/iconos/invierno.png" alt="Icono"> <span class="palabras">Invierno</span>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            <div class="menuDesplegable">
+                <a href="#juguetes">Día de los Juguetes</a>
+                <a href="#añonuevo">Nochevieja</a>
+                <a href="#carnaval">Carnaval</a>
+            </div>
+            <button class="botonDesplegable"><img class="icono" src="./media/iconos/estrella.png" alt="Icono"> <span class="palabras">Especiales</span>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            <div class="menuDesplegable">
+                <a href="#pesca">Torneo de Pesca</a>
+                <a href="#bichos">Caza de Bichos</a>
+                <a href="#cumple">Cumpleaños</a>
+                <a href="#lluvia">Lluvia de Estrellas</a>
+                <a href="#nabos">Nabos</a>
+            </div>
+        </section>
+
+        <section class="contenido">
+            <!-- Contenido de todos los eventos presentes en el juego -->
+            <a id="verimagenes" class='fresco' data-fresco-group='grupo'></a>
+            <h2 id="cerezo"><img class="icono" src="./media/iconos/primavera.png" alt="Icono"> Cerezo en flor:</h2><br>
+            <p><strong>Fecha:</strong> 1 - 10 de abril.</p><br>
+            <p>Durante estas fechas, todos los árboles caducifolios que no tengan frutas cambiarán de color, ya que tendrán pétalos de flores de cerezo, dando un aspecto precioso a nuestra isla. Además, tendremos que estar pendientes, ya que nos podremos
+                encontrar estos pétalos flotando en el aire, y tendremos que recogerlos con nuestra <b>red</b> para poder poder crear nuevos proyectos exclusivos y, además, preciosos y con un toque japonés que nos encanta. Los proyectos que podemos encontrar
+                (tanto en globos como con nuestros vecinos) son:
+            </p><br>
+            <div class="content">
+                <img class="fotocerezo grande imagenResponsive" src="./media/fotos/Primavera/cerezos.jpg" alt="Árboles de flor de cerezo">
+            </div>
+            <ul class="listasContenido">
+                <li>Bolsito flor de cerezo.</li>
+                <li>Cerezo en flor bonsái.</li>
+                <li>Farol flor de cerezo.</li>
+                <li>Jarrón con flores de cerezo.</li>
+                <li>Paraguas flor de cerezo.</li>
+                <li>Pared cerezo.</li>
+                <li>Pared cerezos en flor.</li>
+                <li>Parqué cerezo.</li>
+                <li>Pila de pétalos de cerezo.</li>
+                <li>Reloj flor de cerezo.</li>
+                <li>Roca con agua y pétalos.</li>
+                <li>Set de picnic.</li>
+                <li>Suelo cerezos en flor.</li>
+                <li>Varita flor de cerezo.</li>
+            </ul><br>
+
+            <h2 id="huevo"><img class="icono" src="./media/iconos/primavera.png" alt="Icono"> Caza del Huevo:</h2><br>
+            <p><strong>Fecha: </strong>1 - 12 de abril.</p><br>
+            <p>Durante este periodo de tiempo, veremos por la isla a un conejito un tanto curioso, llamado Coti Conejal, que nos dará nuestro primer proyecto del evento y nos contará que vamos a tener que recolectar los distintos tipos de huevos de pascua
+                que hay. Son los siguientes, y aquí os indicamos cómo conseguir cada uno de ellos:
+                <div class="content ">
+                    <img class="fotohuevos grande imagenResponsive" src="./media/fotos/Primavera/huevos.jpg" alt="Huevos de Pascua">
+                </div>
+            </p><br>
+
+            <p>
+                <ul class="listasContenido">
+                    <li>Acuáticos: pescando.</li>
+                    <li>Celestes: derribando globos con el tirachinas.</li>
+                    <li>Terrestres: cavando en el suelo.</li>
+                    <li>Leñosos: golpeando los árboles con el hacha.</li>
+                    <li>Rupestres: golpeando las rocas.</li>
+                    <li>Boscosos: moviendo los árboles en los que aparecen para que caigan.</li>
+                </ul>
+            </p>
+
+            <p class="parrafo2">
+                La idea del evento es ir recolectando todos estos huevos para poder crear proyectos nuevos, que conseguiremos en las botellas que encontramos por la playa una vez al día, en los globos, recogiendo huevos o de nuestros vecinos. Estos proyectos van a ser:<br>
+                <div class="content ">
+                    <img class="fotocaza grande imagenResponsive" src="./media/fotos/Primavera/cazadelhuevo.jpg" alt="Caza del Huevo">
+                </div>
+            </p><br>
+            <p>
+                <ul class="listasContenido">
+                    <li>Alfombra caza del huevo.</li>
+                    <li>Arco caza del huevo.</li>
+                    <li>Armario caza del huevo.</li>
+                    <li>Cama caza del huevo.</li>
+                    <li>Corona caza del huevo.</li>
+                    <li>Globo caza del huevo set 1 y 2.</li>
+                    <li>Guirnalda caza del huevo.</li>
+                    <li>Guirnalda luz caza del huevo.</li>
+                    <li>Lámpara caza del huevo.</li>
+                    <li>Mesa caza del huevo.</li>
+                    <li>Mochila caza del huevo.</li>
+                    <li>Pared caza del huevo.</li>
+                    <li>Reloj caza del huevo.</li>
+                    <li>Suelo caza del huevo.</li>
+                    <li>Taburete caza del huevo.</li>
+                    <li>Tocador caza del huevo.</li>
+                    <li>Valla caza del huevo.</li>
+                </ul>
+            </p><br>
+            <p>Finalmente, el día 12 de abril, el último del evento, se celebrará la "Caza del Huevo", donde Coti nos esperará para darnos un proyecto nuevo (siempre que hayamos conseguidos todos los del evento) y, cuando realicemos este, nos dará la “varita
+                Caza del Huevo”. Además, si le entregamos un huevo de cada tipo, también una “Cesta Caza del Huevo”. Y con esto habremos completado el evento completamente.
+            </p><br>
+
+            <h2 id="naturaleza"><img class="icono" src="./media/iconos/primavera.png" alt="Icono"> Día de la Naturaleza:</h2><br>
+            <p><strong>Fecha: </strong>23 de abril - 4 de mayo.</p><br>
+            <p>El día de la Naturaleza es un evento temporal dedicado a cuidar el entorno que nos rodea y el medioambiente de nuestra isla, completando nuevas tareas y recibiendo ciertas recompensas por ello. Para comenzar este evento simplemente tendremos
+                que mirar nuestro buzón, donde Toom Nook nos dirá mediante una carta que tendremos una serie de objetivos nuevos para ganar más Millas Nook, todo relacionado con la naturaleza. Para que nos de acceso a estos nuevos objetivos, deberemos
+                ir al centro de gestión vecinal y hablar con él en persona. Una vez activo, tan sólo tendremos que acceder a nuestro panel de Millas Nook, y podremos ver que tenemos una misión nueva cada día con una hojita verde, y que nos dará 5 veces
+                más millas que con cualquier otra misión.
+                <div class="content">
+                    <img class="fotonaturaleza grande imagenResponsive" src="./media/fotos/Primavera/naturaleza.jpg" alt="Día de la Naturaleza">
+                </div>
+            </p><br>
+            <p>Cuando completemos estas misiones nuevas de Millas Nook, nuestro querido mapache Toom Nook nos dará un regalo especial: un proyecto de bricolaje de una valla de arbustos seto. Además, también podremos conseguir logros nuevos gracias a este
+                evento, ya que podremos plantar arbustos, algo nuevo que no habíamos conocido hasta ahora.
+            </p><br>
+            <p>Otra novedad es la aparición de un nuevo personaje: Gandulio, del cual se habla mejor en la sección de <a href="personajes.html"><strong>Personajes</strong></a>.</p><br>
+
+            <h2 id="mayo"><img class="icono" src="./media/iconos/primavera.png" alt="Icono"> Primero de Mayo:</h2><br>
+            <p><strong>Fecha: </strong>1 - 7 de mayo.</p><br>
+            <p>Para comenzar este mini evento temporal, tan sólo tendrás que acercarte a la oficina de gestión vecinal y hablar con Toom Nook, el cual te dirá que para celebrar el día de los trabajadores, ha preparado una escapade de Primero de Mayo, y que
+                podrás viajar a una isla especial con un billete que tendrás que canjear en el aeródromo, hablando con Rafa. Sólo podrás usar este billete una vez.
+            </p><br>
+            <div class="content">
+                <img class="fotomayo grande imagenResponsive" src="./media/fotos/Primavera/mayo.jpg" alt="Día de la Naturaleza">
+            </div>
+            <p>Con este billete especial, viajarás a una isla desierta aleatoria, y tendrás que ir con los bolsillos vacíos (luego te devolverán tus cosas, tranquilo). En esa nueva isla encontrarás un laberinto, el cual tendrás que superar para llegar al
+                premio final. Cabe decir que durante todo el laberinto irás obteniendo herramientas para superarlo poco a poco, y que podrás conseguir tickets para canjearlos por bayas. Si en algún momento te atascas, podrás llamar al Servicio de Rescate
+                y la isla se reiniciará (cuesta 100 Millas Nook).
+            </p><br>
+            <p>Una vez superado el laberinto, llegarás a encontrarte con un personaje conocido de juegos anteriores: Fran, el cual te dará un premio especial. Ten en cuenta que si decides irte a casa y no has obtenido todo lo que te ofrece el laberinto,
+                luego no podrás volver, así que es recomendable acabarlo al 100%, aunque te lleve algo más de tiempo.
+            </p><br>
+
+            <h2 id="museos"><img class="icono" src="./media/iconos/primavera.png" alt="Icono"> Día Internacional de los Museos:</h2><br>
+            <p><strong>Fecha: </strong>18 - 31 de mayo.</p><br>
+            <p>El único requisito para poder comenzar este evento, aparte de tener actualizado el juego, es tener construido el Museo (podrás ver cómo hacerlo en el apartado de <a href="edificios.html"><strong>Edificios</strong></a>). Una vez que comience
+                el evento, Canela o Toom Nook te informarán de que debes pasarte por el Museo para hablar con Sócrates, y así saber qué tienes que hacer. La tarea encomendada en este evento será buscar diferentes sellos especiales dentro del edificio,
+                concretamente en las salas de exposiciones de Bichos, Peces y Fósiles. Cada grupo de sellos consta de 3 sellos que necesitamos estampar la tarjeta que nos habrán entregado al comienzo del evento y, cuando la tengamos completa, deberemos
+                llevársela a Sócrates para que nos de nuestro premio especial:
+                <div class="content">
+                    <img class="fotomuseo grande imagenResponsive" src="./media/fotos/Primavera/museos.jpg" alt="Día Internacional de los Museos"></p>
+            </div>
+            <br>
+
+            <p>
+                <ul class="listasContenido">
+                    <li>Recompensa por los sellos de bichos: placa dorada de bicho.</li>
+                    <li>Recompensa por los sellos de peces: placa dorada de pez.</li>
+                    <li>Recompensa por los sellos de fósiles: placa dorada de fósil.</li>
+                </ul>
+            </p><br>
+            <p>Estas placas podremos colocarlas como decoración en las paredes de nuestra casa. Durante todos los días que dura este evento podremos realizar la búsqueda de sellos. Eso sí, el premio que nos dará Sócrates siempre será el mismo, por lo tanto,
+                está en tu manod decidir si realizar el evento una sola vez y conseguir las placas, o si realizarlo una vez al día y luego vendérselas a Tendo y Nendo, consiguiendo unas 900 bayas al día por las tres placas (no es mucho, sí, pero las hipotecas
+                no se pagan solas).
+            </p><br>
+
+            <h2 id="bodas"><img class="icono" src="./media/iconos/verano.png" alt="Icono"> Temporada de Bodas:</h2><br>
+            <p><strong>Fecha: </strong>1 - 30 de junio.</p><br>
+            <p>Al comenzar el evento, Fauno, un curioso fotógrafo, nos llamará a su estudio para comunicarnos que Al y Paca quieren realizar una serie de fotos para su boda, así que tendremos que dirigirnos al aeródromo y poner rumbo a Cayo Fauno. Una vez
+                allí, y durante cada día que dure el evento, podremos viajar a esa isla para realizar una sesión de fotos a los enamorados (los viajes son totalmente gratuitos)
+            </p>
+            <p>El objetivo del evento es simple: tendremos que hablar con Paca, a continuación decorar la habitación según lo que ella quiera (ceremonia de boda o convite, y los colores que nos diga), y cuando creamos que está todo listo y a su gusto: ¡CLICK!,
+                realizaremos la foto que tanto quieren y se la enseñaremos a ver qué les parece. Si está contenta, te dará un regalito (algún mueble del evento) y joyas amorosas (máximo de 15 usando 20 objetos para la foto), una moneda de intercambio
+                de este evento para poder comprar todo lo que quieras (muebles y ropa de boda). Deberás realizar al menos 7 sesiones de fotos para desbloquear todo el catálogo disponible, y necesitarás al menos 261 joyas para poder adquirirlo por completo.
+                ¡Ánimo y a fotografiar!
+            </p>
+            <div class="contenedor-fotos">
+                <div class="content">
+                    <img class="fotoboda1 grande imagenResponsive" src="./media/fotos/Verano/boda.jpg" alt="Temporada de Bodas: Ceremonia">
+                    <img class="fotoboda2 grande imagenResponsive" src="./media/fotos/Verano/boda2.jpg" alt="Temporada de Bodas: Convite">
+                </div>
+            </div><br>
+
+            <h2 id="fuegos"><img class="icono" src="./media/iconos/verano.png" alt="Icono"> Fuegos Artificiales:</h2><br>
+            <p><strong>Fecha: </strong>Todos los domingos del mes de Agosto, a partir de las 19:00h.</p><br>
+            <p>Para poder este evento, tendremos que irnos en la fecha arriba especificada a la plaza principal del pueblo. Durante el espectáculo, podrás ver a todos tus vecinos disfrutar del evento, hablar con Canela para que te de algún regalito (cuatro
+                diademas para combinar con nuestros modelitos: de corazones, estrellas, florecillas y luciérnagas), o incluso para pedirle (antes de las 19:00h) que utilice fuegos artificiales personalizados (usando tus propios diseños), y además, ¡podrás
+                participar en la Tómbola de Ladino!
+            </p>
+            <p>Para participar, tan sólo tendremos que comprar un ticket por 500 bayas, y así obtener seguro alguno de sus premios (hay un total de 12), y la obtención de los mismos está asegurada la primera vez (es decir, que conque participes en la tómbola
+                12 veces, los obtendrás todos seguro, y a partir de ahí ya irás recibiendo premios aleatorios). Estos premios son:
+                <div class="content">
+                    <img class="fotofuegos grande imagenResponsive" src="./media/fotos/Verano/fuegosartificiales.jpeg" alt="Fuegos Artificiales">
+                </div>
+            </p><br>
+            <p>
+                <ul class="listasContenido">
+                    <li>Bengala roja.</li>
+                    <li>Bengala azul.</li>
+                    <li>Bengala de tubo.</li>
+                    <li>Globo amarillo.</li>
+                    <li>Globo azul.</li>
+                    <li>Globo rojo.</li>
+                    <li>Globo verde.</li>
+                    <li>Globo rosa.</li>
+                    <li>Lanzapompas.</li>
+                    <li>Molinete.</li>
+                    <li>Matasuegras.</li>
+                    <li>Paipay.</li>
+                </ul>
+            </p><br>
+
+            <h2 id="calabazas"><img class="icono" src="./media/iconos/otoño.jpg" alt="Icono"> Temporada de Calabazas:</h2><br>
+            <p><strong>Fecha: </strong>A partir de la actualización de octubre de 2020.</p><br>
+            <div class="content">
+                <img class="fotocalabaza grande imagenResponsive" src="./media/fotos/Otoño/calabazas.jpg" alt="Huerto de Calabazas">
+            </div>
+            <p>
+                Ahora podrás cultivar calabazas para usarlas de decoración o como materiales de fabricación para nuevas recetas. Para conseguir calabazas de vivero, existen dos opciones:
+                <ul class="listasContenido">
+                    <li>Comprar en MiniNook: 280 bayas.</li>
+                    <li>Comprar en el puesto de Gandulio: 140 bayas.</li>
+                </ul>
+
+            </p><br>
+
+            <p>
+                Una vez que las tengas, puedes plantarlas en cualquier lugar con tierra, y deberás regarlas todos los días para que crezcan. Cuando pasen 4 días, tendrás tus calabazas listas para cosechar. Una vez cosechadas, tardan 2 días en volver a brotar. Existen
+                4 tipos distintos de calabazas que pueden crecer cuando las plantes: naranja, amarilla, blanca o verde. Las de color naranja son las normales para usar en los proyectos de bricolaje, mientras que el resto sirven para personalizar estos
+                proyectos y poder cambiarlos de color.
+            </p><br>
+
+            <h2 id="halloween"><img class="icono" src="./media/iconos/otoño.jpg" alt="Icono"> Halloween:</h2><br>
+            <p><strong>Fecha: </strong>30 septiembre - 31 octubre.</p><br>
+            <div class="content">
+                <img class="halloween grande imagenResponsive" src="./media/fotos/Otoño/halloween2.jpg" alt="¡Feliz Halloween!">
+            </div>
+            <p>
+                Aunque el evento dura todo el mes, la verdadera celebración de Halloween es el 31 de octubre, entre las 17:00 y las 0:00h. Durante este evento tendrás que conseguir chuches para la gran noche. Cada día podrás acercarte a MiniNook a comprar una chuche
+                por 120 bayas. Sólo puedes comprar una por día. Además, durante todo el evento podrás conseguir recetas para nuevos proyectos relacionados con la temática, por lo que tendrás que usar las calabazas que has estado cultivando. Estos proyectos
+                los conseguirás como siempre hablando con tus vecinos mientras fabrican objetos o rompiendo globos. Además, la misma noche de Halloween, si le das chuches a tus vecinos, también te regalarán nuevas recetas.
+            </p><br>
+
+            <p>
+                Además, el mismo día 31 aparecerá Soponcio en la isla, y deberás llevar un atuendo acorde a la ocasión como todos tus vecinos para disfrutar de la fiesta en todo su esplendor. Este nuevo personaje te dará más recompensas especiales por entregarle piruletas
+                (las cuales te las darán también tus vecinos por entregarles chuches).
+            </p><br>
+
+            <h2 id="pavo"><img class="icono" src="./media/iconos/otoño.jpg" alt="Icono"> Día del Pavo:</h2><br>
+            <p><strong>Fecha: </strong>26 de noviembre.</p><br>
+            <p>
+                En este evento, que está inspirado en Acción de Gracias, recibiremos en la plaza de nuestra isla a un invitado especial, Guindo, al cual tendremos que ayudar a cocinar 4 platos (tendremos que ayudarle con los ingredientes). Como recompensa, nos dará 4
+                muebles, pero podremos conseguir recetas nuevas si le llevamos ingredientes extra para darle un toque único a sus platos. Los platos a cocinar y los ingredientes son:
+                <div class="content">
+                    <img class="pavo grande imagenResponsive" src="./media/fotos/Otoño/acciongracias.jpg" alt="Día del Pavo">
+                </div>
+                <ul class="listasContenido">
+                    <li><strong>Sopa de almeja:</strong>
+                        <ul>
+                            <li>3 almejas.</li>
+                            <li>Secreto: vieria.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Pastel de calabaza:</strong>
+                        <ul>
+                            <li>1 calabaza naranja</li>
+                            <li>1 calabaza de otro color.</li>
+                            <li>Secreto: las 2 calabas restantes.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Gratinado:</strong>
+                        <ul>
+                            <li>1 mejillón.</li>
+                            <li>1 champiñón.</li>
+                            <li>Secreto: buey del pacífico.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Pescado:</strong>
+                        <ul>
+                            <li>1 lubina.</li>
+                            <li>1 gallo, rodaballo o pargo rojo.</li>
+                            <li>Secreto: dorada japonesa.</li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </p><br>
+
+            <h2 id="juguetes"><img class="icono" src="./media/iconos/invierno.png" alt="Icono"> Día de los Juguetes:</h2><br>
+            <p><strong>Fecha: </strong>1 - 25 de diciembre.</p><br>
+            <div class="content">
+                <img class="juguete grande imagenResponsive" src="./media/fotos/Invierno/juguetes.jpeg" alt="Día del Pavo">
+            </div>
+            <p>
+                Aunque durante todo este periodo se puede disfrutar de las características del evento, este como tal tiene lugar el 24 de diciembre de 18:00 a 05:00h. Durante el evento podrás comprar juguetes cada día en MiniNook, para después poder repartirlos entre
+                tus vecinos. El día del evento, verás por tu isla a un personaje de lo más curiosos, Renato, que te pedirá ayudar para llevar a cabo su tarea durante ese día: ¡repartir regalos a todo el mundo!
+            </p><br>
+            <p>
+                Una vez que hables con él te dará la receta de papel de regalo. Tendrás que fabricar 3 para que te de la <strong>bolsa mágica</strong> y así repartir los regalos de Papá Noel entre todos tus vecinos, y unos calcetines para colgar en tu
+                casa. Según vayas repartiendo los regalos, irás consiguiendo recompensas y nuevos objetos del evento (algunas veces serán los mismos juguetes que hayas comprado pero de colores diferentes). Los calcetines deberás colgarlos en tu casa esa
+                misma noche para tener una sorpresita cuando te levantes el día 25: una foto del mismísimo Renato.
+            </p><br>
+
+            <h2 id="añonuevo"><img class="icono" src="./media/iconos/invierno.png" alt="Icono"> Año Nuevo:</h2><br>
+            <p><strong>Fecha: </strong>31 de diciembre.</p><br>
+            <div class="content">
+                <img class="añonuevo grande imagenResponsive" src="./media/fotos/Invierno/añonuevo.jpeg" alt="Año nuevo">
+            </div>
+            <p>
+                A lo largo de todo el día, veremos en la plaza un gran reloj con la cuenta atrás para el año nuevo, y ambos lados estarán tanto Canela como Toom Nook bien arreglados para la ocasión (sí, es el único día de vacaciones que tienen). Al hablar con Canela
+                nos dará un objeto exclusivo: una varita de luz para utilizar durante la noche, y Toom Nook nos dará 5 cañones de confeti. ¡Vamos a celebrar la entrada de año por todo lo alto! También podremos observar que tiene una pequeña tienda al
+                lado, y es que si hablas con él podrás comprarle sombreros especiales para la ocasión, de distintos colores (también cambia el tipo de sombrero en cada isla, por lo que puedes comprar alguno diferente en las islas de tus amigos).
+            </p><br>
+            <p>
+                Cuando ya sólo quede una hora para el gran momento, verás que TODOS tus vecinos se van congregando en la plaza, evidentemente todos van acorde a la ocasión. Cuando comience la cuenta atrás real (10s), verás que todos al unísono cantan esa cuenta, la cual
+                finalizará con un espectáculo de fuegos artificiales, que durará 2 horas para que puedas disfrutarlo. Aun así, si estás con tu familia y es imposible que lo veas, recordamos que puedes modificar la hora de la Switch para poder ver ese
+                espectáculo en directo al día siguiente.
+            </p><br>
+
+            <h2 id="carnaval"><img class="icono" src="./media/iconos/invierno.png" alt="Icono"> Carnaval:</h2><br>
+            <p><strong>Fecha: </strong>15 de febrero.</p><br>
+            <div class="content">
+                <img class="carnaval grande imagenResponsive" src="./media/fotos/Invierno/carnaval.jpg" alt="Carnaval">
+            </div>
+            <p>
+                Durante todo el día podrás disfrutar de este evento y de su característico personaje: <strong>Conga</strong>. Una de las características de este evento es que veremos plumas volando por el aire de diferentes colores (azul, verde, morada
+                y roja), las cuales podremos atrapar con nuestra <strong>red</strong>. Cuando hablemos con Conga, nos dará la receta de la <strong>pluma arcoíris</strong>, la cual conseguimos con una pluma de cada color (nos servirá para personalizar
+                los objetos de este evento).
+            </p><br>
+            <p>
+                Además, si le entregas 3 plumas de cada color, ella te dará uno de los objetos de Carnaval del color de las plumas. En el caso de que le entregues una pluma arcoíris, te dará el objeto exclusivo del evento: la <strong>Carroza de Carnaval</strong>.
+                Además, tus vecinos participan también en el evento, por lo que podrás intercambiar plumas con ellos para que sea más fácil conseguir los objetos del color que quieras.
+            </p><br>
+            <p>
+                Aparte de los objetos que nos entrega Conga, realmente podemos conseguirlos todos en <strong>MiniNook</strong>, a partir del 1 de febrero hasta que finalice el evento. En la <strong>Sastrería de las Hermanas Manitas</strong>, también conseguiremos
+                atuendos especiales adecuados a la ocasión.
+            </p><br>
+
+            <h2 id="pesca"><img class="icono" src="./media/iconos/estrella.png" alt="Icono"> Torneo de Pesca:</h2><br>
+            <p><strong>Fecha: </strong>11-abril | 11-julio | 10-octubre | 9-enero.</p><br>
+            <div class="content">
+                <img class="pesca grande imagenResponsive" src="./media/fotos/Especiales/pesca.jpeg" alt="Torneo de Pesca">
+            </div>
+            <p>
+                Este evento normalmente caerá siempre en sábado, por lo que las fechas irán cambiando cada año. El evento comenzará a las 9:00 y durará hasta las 18:00h. Siempre te avisarán en el tablón de anuncios unos días antes de que tenga lugar el evento. Este torneo
+                consiste en:
+                <ul class="listasContenido">
+                    <li> Pescar el mayor número posible de peces en 3 minutos.</li>
+                    <li> El tiempo comienza desde que terminas de hablar con CJ y se permiten usar cebos.</li>
+                    <li> Se obtiene un punto por cada pez pescado (con bonificaciones a partir del tercero).</li>
+                </ul>
+            </p>
+            <p>Las recomendaciones antes de comenzar es preparar varios cebos y una caña resistente (incluso llevar más de una por si acaso), e irte al mar, donde es más fácil pescar.</p><br>
+            <p>
+                Como vas a ir acumulando puntos por pescar, podrás canjearlos por algunas recompensas hablando con CJ, además de venderle todo lo que pesques (a un precio mucho mayor que en la tienda). Además de las recompensas canjeables, según los puntos que vayas
+                obteniendo, también podrás recibir por correo trofeos del Torneo:
+                <ul class="listasContenido">
+                    <li> <strong>Bronce</strong>: 100-199 puntos.</li>
+                    <li> <strong>Plata</strong>: 200-299 puntos.</li>
+                    <li> <strong>Oro</strong>: 300 o más puntos.</li>
+                </ul>
+            </p><br>
+
+            <h2 id="bichos"><img class="icono" src="./media/iconos/estrella.png" alt="Icono"> Caza de Bichos:</h2><br>
+            <p><strong>Fecha: </strong>Junio, Julio, Agosto y Septiembre.</p><br>
+            <div class="content">
+                <img class="bichos grande imagenResponsive" src="./media/fotos/Especiales/bicho.jpeg" alt="Caza de Bichos">
+            </div>
+            <p>
+                Este torneo se celebrará también 4 veces como el de pesca, aunque estará concentrado en los meses de verano y otoño (que es cuando los bichos están por todas partes, Sócrates no debe estar nada contento). El objetivo es el mismo que el Torneo de Pescar,
+                cazar el máximo número de insectos con la red durante 3 minutos. La puntuación es la misma y, al igual que en el anterior torneo, podrás tanto venderle los insectos a Kamilo, como canjear los puntos por recompensas especiales. También
+                obtendrás trofeos en función de los puntos finales obtenidos.
+            </p><br>
+            <p>Podríamos decir que este evento es un poco más complicado, ya que al no tener cebos como en el de pesca, dependemos de los insectos que haya por la zona, y debemos tener cuidado de no espantarlos cuando vamos corriendo de un lado a otro. También
+                podemos golpear las rocas para ver si tenemos suerte y conseguimos que salga algún insecto, o mover los árboles. Eso sí, ¡cuidado que no os piquen las avispas!
+            </p><br>
+
+            <h2 id="cumple"><img class="icono" src="./media/iconos/estrella.png" alt="Icono"> Cumpleaños:</h2><br>
+            <p><strong>Fecha: </strong>Como bien dice el nombre, justo en tu cumpleaños real.</p><br>
+            <p>
+                Aparte de tu cumpleaños, cada personaje del juego tiene su propio día de celebración. Se anunciará en el tablón con antelación, como siempre, y durante ese día podrás pasarte por su casa para ver la celebración y pasar un rato con él. Eso sí, no te olvides
+                de llevarte un regalito, porque está bastante feo presentarte en la fiesta sin nada... ¿verdad?
+            </p><br>
+            <p>Pero ahora vamos a hablar de lo que te interesa, <strong>¡tu fiesta de cumpleaños!</strong><br> Cuando llegue el día y comience el juego, lo primero que verás es a uno de tus vecinos venir a hablar contigo en la puerta de tu casa. Lo que te
+                dirá es que te pases por su casa porque... te han preparado algo especial. Ve allí cuando quieras y te encontraras con varios vecinos vestidos para la ocasión, ¡y una <strong>tarta</strong> especial para ti! Tendrás que acercarte a la
+                mesa y soplar las velas para recibir el objeto <strong>Tarta de Cumpleaños</strong>. Tras esto, te dirán que han preparado una <strong>piñata</strong>, así que ¡coge fuerzas para romperla! Una vez que lo hagas (tendrás que darle varios
+                golpes), conseguirás pastelitos, los cuales podrás repartir con todos los vecinos de tu isla. Además, Totakeke visitará tu isla ese día para cantarte un tema especial.
+            </p><br>
+            <div class="contenedor-fotos">
+                <div class="content">
+                    <img class="cumple1 grande imagenResponsive" src="./media/fotos/Especiales/cumple.jpg" alt="Fiesta de Cumpleaños">
+                    <img class="cumple2 grande imagenResponsive" src="./media/fotos/Especiales/cumpleaños.jpeg" alt="Regalos de Cumpleaños">
+                </div>
+            </div><br>
+
+            <h2 id="lluvia"><img class="icono" src="./media/iconos/estrella.png" alt="Icono"> Lluvia de Estrellas:</h2><br>
+            <p><strong>Fecha: </strong>Noches aleatorias durante todo el año.</p><br>
+            <div class="content">
+                <img class="lluvia grande imagenResponsive" src="./media/fotos/Especiales/estrellafugaz.jpg" alt="Lluvia de Estrellas">
+            </div>
+            <p>
+                Podemos decir que una de las visitas más esperadas del juego es la de <strong>Estela</strong>, la hermana de Sócrates, lo que significa que esa noche habrá lluvia de estrellas en tu isla. Su aparición es totalmente aleatoria, así que te
+                recomendamos estar atentos e investigar toda la isla a partir de las 19:00h. Si la ves, habla con ella, porque te dará recetas relacionadas con los horóscopos (el que corresponda en cada momento), y con la astronomía. Además, si le llevas
+                los muebles de los horóscopos cuando los crees, te contará pequeñas historias sobre ellos.
+            </p><br>
+            <p>Para ver las estrellas y pedir deseos, tan sólo tienes que prestar atención a unos pequeños detalles:
+                <ul class="listasContenido">
+                    <li> Que el cielo esté despejado.</li>
+                    <li> No tener herramientas en las manos.</li>
+                    <li> Mirar hacia el cielo, y cuando veas la estrella pulsar el botón <strong>A</strong>. Verás que la estrella resplandece, lo que indicará que has pedido bien el deseo.</li>
+                    <li> Puedes prestar atención también al sonido, ya que cuando empiezan a caer emiten un leve tintineo.</li>
+                </ul>
+            </p><br>
+            <p>
+                Existen varios logros por pedir cierto número de deseos. Y también debes tener en cuenta que, según la cantidad de deseos que pidas, al día siguiente podrás encontrar esparcidas por la playa de tu isla fragmentos de estrella. Estos fragmentos podrán ser
+                normales, XL, o del Zodíaco (ten en cuenta que necesitarás 2 de cada uno para construir los muebles, además de oro).
+            </p><br>
+
+            <h2 id="nabos"><img class="icono" src="./media/iconos/estrella.png" alt="Icono"> Compraventa de Nabos:</h2><br>
+            <p><strong>Fecha: </strong>Todos los domingos del año.</p><br>
+            <p>
+                La idea principal de la compraventa de nabos se basa es comprarlos lo más baratos posibles, para luego venderlos a precios superiores durante la semana. Puede ser tanto en nuestra isla como en la de nuestros amigos. En esta entrega será Juliana quien
+                nos venda los nabos. Para ello, deberemos buscarla por nuestra isla todos los domingos antes de las 12:00h. Juliana te venderá los nabos de 10 en 10, y su precio varía cada semana y entre cada jugador. Recomendamos comprarlos siempre que
+                sea un precio razonablemente barato, para así poder sacarle partido (menos de 100 bayas).
+            </p><br>
+            <p>
+                Una vez los tengamos, deberemos pasarnos por la tienda cada día y preguntarles a Tendo y Nendo a cuánto compran los nabos, ¡y ahí empieza la especulación! Eso sí, tendrás que venderlos antes del domingo, ya que si no acabarás con un montón de nabos podridos.
+                Los nabos se venden a precios distintos dos veces al día, antes y después de las 12:00, así que tendrás que ir preguntando para ver cómo va variando el precio. Existen páginas y aplicaciones que te calcula qué posibilidades hay de que
+                tengas un precio decente en tu isla, por ejemplo <a href="https://turnipprophet.io/" target="_blank"><strong>Turnip Prophet</strong></a>. Si ves que no hay forma, siempre puedes viajar a las islas de tus amigos, o pedir
+                por otras páginas, como <a href="https://turnip.exchange/" target="_blank"><strong>Turnip.Exchange</strong></a>, que te dejen ir a vender tus nabos. La gente suele pedir bayas, tickets millas y oro a cambio de dejarte entrar en su isla
+                para vender.<br> El precio normal (y medio decente) de venta ronda entre unos 120-130 bayas. En raras ocasiones podrás venderlos a precios altísimos en tu isla (entre 400-600 bayas). Por eso te recomendamos mirar estas páginas, porque
+                si ves que en tu isla es imposible, siempre habrá gente que los tendrá a un precio desorbitado. Es una forma fácil y rápida de ganar bastantes bayas para poder pagar tu hipoteca.
+            </p><br>
+            <div class="contenedor-fotos">
+                <div class="content">
+                    <img class="nabos1 grande imagenResponsive" src="./media/fotos/Especiales/nabos.jpg" alt="Juliana vendiendo nabos">
+                    <img class="nabos2 grande imagenResponsive" src="./media/fotos/Especiales/nabos.jpeg" alt="Colección de nabos">
+                </div>
+            </div><br>
+        </section>
+
+    </div>
+
+    <!-- Se agregan los Javascript que vamos a usar en cada página -->
+    <script src="./js/jsproyecto.js"></script>
+    <script src="./js/jslogin.js"></script>
+
+</body>
+
+</html>

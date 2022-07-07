@@ -1,0 +1,148 @@
+/*CSS
+Web o pagina: Proyecto Final 1º DAM
+Autor: Mª Carmen Arias de Haro
+Fecha: Junio 2021
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&family=New+Tegomin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: gainsboro;
+    background-image: url("../media/fondo.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.menu {
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    text-align: center;
+    background-color: #FFCE29;
+    display: flex;
+}
+
+.menu a {
+    list-style: none;
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 10px;
+    position: relative;
+    font-size: 20px;
+    font-family: 'Londrina Solid', cursive;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: white;
+    border-radius: 15px;
+    height: 100%;
+    color: #C75A00;
+    font-size: 1.5em;
+    padding: 11px 13px;
+    transition: all .3s ease-in-out;
+}
+
+.pdf {
+    width: 20%;
+    text-align: left;
+}
+
+.volver {
+    width: 20%;
+    text-align: right;
+}
+
+#conectado {
+    width: 60%;
+    text-align: center;
+}
+
+.oculto {
+    display: none;
+}
+
+.container {
+    /*Css del contenedor que tiene las dos imágenes del efecto dolly*/
+    width: 900px;
+    max-width: 1060px;
+    background: #000;
+    overflow: hidden;
+    margin: 25px auto;
+    position: relative;
+    height: 600px;
+    border: solid;
+    border-color: rgb(255, 173, 22);
+}
+
+.container:hover .background {
+    -webkit-transform: scale(0.8) translate(-50%, -50%);
+    -ms-transform: scale(0.8) translate(-50%, -50%);
+    transform: scale(0.8) translate(-50%, -50%);
+}
+
+.container:hover .front {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.background {
+    /*Css de la imagen de fondo del efecto*/
+    top: 50%;
+    left: 50%;
+    width: 1411px;
+    height: 800px;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-transition: -webkit-transform 2s;
+    transition: transform 2s;
+}
+
+.front {
+    /*Css de la imagen superior del efecto*/
+    top: 30%;
+    left: 60%;
+    z-index: 1;
+    position: absolute;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform 2s;
+    transition: transform 2s;
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        display: none;
+    }
+    .oculto {
+        display: block;
+        text-align: center;
+        background-color: #C0F0E9;
+        padding: 20%;
+        margin: 10%;
+    }
+    p {
+        padding-left: 10%;
+        padding-right: 10%;
+        font-family: 'Acme', sans-serif;
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+Web o pagina: Proyecto Final 1º DAM
+Autor: Mª Carmen Arias de Haro
+Fecha: Junio 2021
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- importante SEO para la etiqueta del navegador -->
+    <title>Animal Crossing</title>
+
+
+    <!-- una hoja de estilos personalizada-->
+    <link href="./css/cssproyecto.css" rel="stylesheet" />
+    <link href="./css/cssedificios.css" rel="stylesheet" />
+    <link href="./css/fonts.css" rel="stylesheet" />
+
+    <!-- iconos u otros elementos externos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- scripts externos de librerias JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="marco">
+        <header class="encabezado">
+            <div id="logo">
+                <button class="darkModeSwitch" id="switch">
+                    <span><i class="fa fa-sun-o"></i></span>   
+                    <span><i class="fa fa-moon-o"></i></span></button>
+                <img class="logo" src="./media/logo.png">
+                <a href="./trabajofinal.html"><img class="hoja" src="./media/hoja.png" alt="Proyecto Final Web"></a>
+            </div>
+
+            <div class="menu_bar">
+                <a href="#" class="bt-menu"><span class="icon-menu"></span></a>
+            </div>
+
+            <nav aria-label class="menuResponsive">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="personajes.html">Personajes</a></li>
+                    <li><a class="activo" href="edificios.html">Edificios</a></li>
+                    <button class="darkModeSwitchResponsive" id="switch2">
+                        <span><i class="fa fa-sun-o"></i></span>   
+                        <span><i class="fa fa-moon-o"></i></span></button>
+                </ul>
+            </nav>
+
+            <nav aria-label class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="personajes.html">Personajes</a></li>
+                    <li><a class="activo" href="edificios.html">Edificios</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Menú lateral con el acceso rápido a los edificios mostrados en el contenido de la página-->
+        <section class="lado">
+            <a href="#oficina">Oficina Gestión Vecinal</a>
+            <a href="#museo">Museo</a>
+            <a href="#mininook">MiniNook</a>
+            <a href="#manitas">Hermanas Manitas</a>
+            <a href="#casa">Tu Casa</a>
+        </section>
+
+        <section class="contenido">
+            <!-- Contenido de todos los edificios presentes en el juego -->
+            <div class="edificio">
+                <h2 id="oficina">Oficina de Gestión Vecinal:</h2>
+                <p>Al principio Tom Nook tendrá un pequeño edificio de color verde donde podrás empezar a aceptar y completar las primeras tareas, acceder al terminal y comprar algunas cosas de Tendo y Nendo. Más tarde podrás actualizar este edificio y convertirlo
+                    en un Centro de Gestión Vecinal cuando cumples una serie de requisitos como atraer tres aldeanos a tu isla y ayudarles con los muebles. Cuando hayan pasado un par de días se empezará a construir el centro de gestión vecinal.
+                </p>
+                <div class="image-wrap">
+                    <img src="./media/fotos/Edificios/gestionvecinal.jpeg" alt="Edificio de Gestión Vecinal">
+                </div>
+            </div>
+
+            <div class="edificio">
+                <h2 id="museo">Museo:</h2>
+                <p>Cuando Sócrates te visite en tu isla, primero abrirá una pequeña carpa donde podremos visitarle para entregarle nuevos especímenes. Debemos convencerle para que forme el museo, para lo cual debemos pescar cinco peces y cazar cinco insectos
+                    cuando hayamos conseguido 15 especímenes. Entonces construirá el primer Museo oficial de la isla.</p>
+                <div class="image-wrap">
+                    <img class="izq" src="./media/fotos/Edificios/museo2.jpeg" alt="Museo Inicial">
+                </div>
+                <p>
+                    Una vez construido, dentro del museo podremos visitar 3 secciones: Peces, Fósiles e Insectos. Sin embargo, podremos ampliarlo para obtener también una galería de arte. Para ello, deberemos entregarle una obra cualquiera (verdadera, por supuesto) a Sócrates,
+                    y nos comentará la posibilidad de expandir el Museo.
+                </p>
+                <div class="image-wrap">
+                    <img class="dcha" src="./media/fotos/Edificios/museo.jpg" alt="Museo Final">
+                </div>
+
+                <div class="edificio">
+                    <h2 id="mininook">Mini Nook:</h2>
+                    <p>Aunque Tengo nos va a vender desde el primer día que estemos en la isla, llegará un momento en que nos pedirá ayuda para montar una pequeña tienda con su hermano Nendo. Eso será cuando hayamos pagado nuestra primera hipoteca, y pase
+                        un día real de juego. Entonces nos pedirá una serie de materiales para poder construir esa pequeña tienda. Una vez se lo demos todo comenzará la construcción. Lo bueno de tener la tienda es que podremos encontrar muebles nuevos,
+                        diseños, vender objetos, ¡y mil cosas más!
+                    </p>
+                    <div class="image-wrap">
+                        <img src="./media/fotos/Edificios/mininook.jpeg" alt="Tienda MiniNook Inicial">
+                    </div>
+                    <p>
+                        Pero esto no es todo, esta tienda puede mejorarse y convertirse en ¡todo un supermercado! Para ello, tendremos que cumplir una serie de condiciones, que son:
+                        <ul class="listasContenido">
+                            <li> Jugar durante al menos 28 días.</li>
+                            <li> Tener la oficina de gestión vecinal.</li>
+                            <li> Gastar 70.000 bayas en su tienda.</li>
+                        </ul>
+                    </p>
+                    <div class="image-wrap">
+                        <img src="./media/fotos/Edificios/mininook2.jpeg" alt="Supermercado MiniNook">
+                    </div>
+                </div>
+
+                <div class="edificio">
+                    <h2 id="manitas">Sastrería de las Hermanas Manitas:</h2>
+                    <p>Una vez que hayamos conseguido la tienda de los hermanos mapache, veremos a Pili, una de las hermanas puercoespín acercarse a la isla para felicitar a estos pequeñines. A partir de ese momento, aparecerá eventualmente en tu isla con
+                        un puesto ambulante de ropa (cada día traerá secciones nuevas), y ahí empezará tu misión para conseguir que decida instalarse en tu isla. Para ello, tendrás que:
+                        <ul class="listasContenido">
+                            <li> Comprarle ropa en 3 días diferentes.</li>
+                            <li> Gastar sobre unas 5.000 bayas en sus artículos, aproximadamente.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Cuando te hayas ganado su confianza, te dará un kit de la Sastrería para que la coloques en la zona que quieras de tu isla (luego puedes cambiarla de sitio si quieres, como todos los edificios). Dos días después de instalarlo, la tienda estará lista y
+                        podrás comprar todo tipo de accesorios para personalizar a tu personaje, ¡o para regalar a tus vecinos!
+                    </p>
+                    <div class="image-wrap">
+                        <img src="./media/fotos/Edificios/hermanasmanitas.jpg" alt="Sastrería de las Hermanas Manitas">
+                    </div>
+                </div>
+
+                <div class="edificio">
+                    <h2 id="casa">¡Tu Casa!</h2>
+                    <p>Cuando llegamos a la isla, vamos a estar instalados en una tienda de campaña, por la cual le deberemos una pequeña deuda a nuestro amigo Toom Nook: 5.000 millas. Una vez paguemos esa deuda, nos ofrecerá construirnos una pequeña casita
+                        para vivir. Una vez tengamos la casa, estaremos hipotecados de por vida. Tendremos que ir pagando cada hipoteca (esta vez con bayas, y cada vez serán más), para así poder pedirle ampliaciones de la casa a Toom Nook. Siempre que
+                        tengamos una amplicación nueva, deberemos pagarle todas las bayas antes de poder solicitar la siguiente. Con cada mejora de la casa, aumenta la capacidad del trastero y se añaden habitaciones nuevas.
+                    </p>
+                    <div class="image-wrap">
+                        <img src="./media/fotos/Edificios/casa2.jpg" alt="Casa por fuera">
+                    </div>
+                    <p>
+                        Existen un total de 7 mejoras, siendo las dos últimas una planta superior y un sótano, por lo que se nos quedará una casita bastante apañada para decorarla a nuestro gusto. Es importante recordar que cada domingo, la Escuela de Artes Decorativas se pasa
+                        por las casa para valorar la decoración. Cuanto mejor sea, mayor puntuación nos darán y podremos conseguir algunos trofeos que colocar por la casa y presumir de ellos.
+                        <br><br> Además de todas estas amplicaciones, con la última actualización del juego, nos ofrecen la posibilidad de aumentar aún más el trastero (lo cual se agradece muchísimo, porque sí, se acaba quedando corto). Eso sí, para ello,
+                        tendremos que pagarle a nuestro querido mapache nada menos que 500.000 bayas del tirón. Pero merece la pena, de verdad.
+                    </p>
+                    <div class="image-wrap">
+                        <img src="./media/fotos/Edificios/casa3.jpg" alt="Casa por dentro">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Se agregan los Javascript que vamos a usar en cada página -->
+        <script src="./js/jsproyecto.js"></script>
+        <script src="./js/jslogin.js"></script>
+</body>
+
+</html>
